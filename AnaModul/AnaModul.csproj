@@ -86,7 +86,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FrmOgretmenler\OgretmenlerModul.csproj">
+    <ProjectReference Include="..\OgretmenlerModul\OgretmenlerModul.csproj">
       <Project>{3A10FACF-F070-4710-9310-59841A2BB843}</Project>
       <Name>OgretmenlerModul</Name>
     </ProjectReference>
