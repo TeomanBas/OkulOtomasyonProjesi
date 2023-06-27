@@ -53,16 +53,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmAnaModul.cs">
+    <Compile Include="AnaModul.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAnaModul.Designer.cs">
-      <DependentUpon>FrmAnaModul.cs</DependentUpon>
+    <Compile Include="AnaModul.Designer.cs">
+      <DependentUpon>AnaModul.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmAnaModul.resx">
-      <DependentUpon>FrmAnaModul.cs</DependentUpon>
+    <EmbeddedResource Include="AnaModul.resx">
+      <DependentUpon>AnaModul.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -84,6 +84,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FrmOgretmenler\OgretmenlerModul.csproj">
+      <Project>{3A10FACF-F070-4710-9310-59841A2BB843}</Project>
+      <Name>OgretmenlerModul</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
