@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace AnaSayfa
+namespace FrmOgretmenler
 {
     public partial class Form1 : DevExpress.XtraEditors.XtraForm
     {
@@ -16,12 +16,22 @@ namespace AnaSayfa
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void groupControl2_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void maskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void labelControl15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl16_Click(object sender, EventArgs e)
         {
 
         }
