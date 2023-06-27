@@ -6,7 +6,7 @@ using DevExpress.LookAndFeel;
 using DevExpress.Skins;
 using DevExpress.UserSkins;
 
-namespace AnaSayfa
+namespace FrmOgretmenler
 {
     internal static class Program
     {
@@ -18,7 +18,7 @@ namespace AnaSayfa
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmAnaModul());
+            Application.Run(new Form1());
         }
     }
 }
