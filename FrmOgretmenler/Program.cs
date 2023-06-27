@@ -6,7 +6,8 @@ using DevExpress.LookAndFeel;
 using DevExpress.Skins;
 using DevExpress.UserSkins;
 
-namespace FrmOgretmenler
+
+namespace OgretmenlerModul
 {
     internal static class Program
     {
@@ -18,7 +19,7 @@ namespace FrmOgretmenler
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Ogretmenler());
         }
     }
 }

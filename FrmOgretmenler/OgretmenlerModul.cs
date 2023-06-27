@@ -7,13 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FrmOgretmenler
+namespace OgretmenlerModul
 {
-    public partial class Form1 : DevExpress.XtraEditors.XtraForm
+    public partial class Ogretmenler : DevExpress.XtraEditors.XtraForm
     {
-        public Form1()
+        public Ogretmenler()
         {
             InitializeComponent();
+            // hangi formun ebeyni olacağını seçiyoruz
+            this.MdiParent = Application.OpenForms["AnaModul"];
         }
 
         private void groupControl2_Paint(object sender, PaintEventArgs e)
