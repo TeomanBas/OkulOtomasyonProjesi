@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnaSayfa", "AnaSayfa\AnaSayfa.csproj", "{CDAADF82-EF8D-46A1-99C5-9DB55AB915A7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnaModul", "AnaModul\AnaModul.csproj", "{CDAADF82-EF8D-46A1-99C5-9DB55AB915A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OgretmenlerModul", "OgretmenlerModul\OgretmenlerModul.csproj", "{3A10FACF-F070-4710-9310-59841A2BB843}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{CDAADF82-EF8D-46A1-99C5-9DB55AB915A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDAADF82-EF8D-46A1-99C5-9DB55AB915A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDAADF82-EF8D-46A1-99C5-9DB55AB915A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A10FACF-F070-4710-9310-59841A2BB843}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A10FACF-F070-4710-9310-59841A2BB843}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A10FACF-F070-4710-9310-59841A2BB843}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A10FACF-F070-4710-9310-59841A2BB843}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C0F62B5-5488-4CE0-A5B4-71502B85ECC7}
 	EndGlobalSection
 EndGlobal
