@@ -32,12 +32,17 @@ namespace AnaModul
         // OgretmenlerModul name space indeki OgretmenlerModul class ına erişim sağladık
         Ogretmenler OgretmenlerSayfasi;
         private void BtnOgretmenler_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {   //
-            OgretmenlerSayfasi = new Ogretmenler();
-            // parent olan form un içerisinde olması için tanımlama yapıldı OgretmenlerModul formunu yeni pencerede
-            // değil de bu formun içerisinde açacak
-            OgretmenlerSayfasi.MdiParent = this;
-            OgretmenlerSayfasi.Show();
+        {   
+            //bir sayfanın birden çok defa açılmaması için koşul eklendi.
+            if (OgretmenlerSayfasi==null)
+            {
+                OgretmenlerSayfasi = new Ogretmenler();
+                // parent olan form un içerisinde olması için tanımlama yapıldı OgretmenlerModul formunu yeni pencerede
+                // değil de bu formun içerisinde açacak
+                OgretmenlerSayfasi.MdiParent = this;
+                OgretmenlerSayfasi.Show();
+            }
+            
         }
     }
 }
