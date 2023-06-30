@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Veritabani;
 
 namespace OgretmenlerModul
 {
@@ -36,6 +37,12 @@ namespace OgretmenlerModul
         private void labelControl16_Click(object sender, EventArgs e)
         {
 
+        }
+
+        Veritabani.Veritabani bgl = new Veritabani.Veritabani();
+        private void Ogretmenler_Load(object sender, EventArgs e)
+        {
+            gridControl1.DataSource = bgl.OgretmenBilgiGetir();
         }
     }
 }

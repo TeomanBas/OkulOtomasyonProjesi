@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnaModul", "AnaModul\AnaMod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OgretmenlerModul", "OgretmenlerModul\OgretmenlerModul.csproj", "{3A10FACF-F070-4710-9310-59841A2BB843}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veritabani", "Veritabani\Veritabani.csproj", "{AAC4EAFE-4508-4752-A5BC-917BF7A4AC13}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3A10FACF-F070-4710-9310-59841A2BB843}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A10FACF-F070-4710-9310-59841A2BB843}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A10FACF-F070-4710-9310-59841A2BB843}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAC4EAFE-4508-4752-A5BC-917BF7A4AC13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAC4EAFE-4508-4752-A5BC-917BF7A4AC13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAC4EAFE-4508-4752-A5BC-917BF7A4AC13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAC4EAFE-4508-4752-A5BC-917BF7A4AC13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

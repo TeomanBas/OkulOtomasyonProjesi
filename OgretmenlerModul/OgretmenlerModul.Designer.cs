@@ -423,6 +423,7 @@
             this.Controls.Add(this.gridControl1);
             this.Name = "Ogretmenler";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Ogretmenler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
