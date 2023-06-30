@@ -12,3 +12,5 @@ ilk aşama olarak database, öğretmenler tablosu ve düşük yetkili kullanıc�
 
 öğretmenler penceresi;
 ![ogretmenler-modulu-1](./img/ogretmenler-modulu-veritabani-baglanti.PNG)
+
+

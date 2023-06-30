@@ -38,7 +38,6 @@ namespace OgretmenlerModul
         {
 
         }
-
         Veritabani.Veritabani bgl = new Veritabani.Veritabani();
         private void Ogretmenler_Load(object sender, EventArgs e)
         {
