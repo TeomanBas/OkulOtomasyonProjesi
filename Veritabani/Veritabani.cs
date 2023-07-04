@@ -80,5 +80,15 @@ namespace Veritabani
             MessageBox.Show("Personel Eklendi", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
+        public void BransListele(ComboBoxEdit branslar)
+        {
+            SqlCommand cmd = new SqlCommand("SELECT * FROM TBL_BRANSLAR", Baglanti());
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                branslar.Properties.Items.Add(dr[1]);
+            }
+            Baglanti().Close();
+        }   
     }
 }
