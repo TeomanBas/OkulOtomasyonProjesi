@@ -42,6 +42,8 @@ namespace OgretmenlerModul
         private void Ogretmenler_Load(object sender, EventArgs e)
         {
             gridControl1.DataSource = bgl.OgretmenBilgiGetir();
+            bgl.IlIlceList(CmbIl, "il");
+            bgl.IlIlceList(CmbIlce,"ilce");
         }
     }
 }
