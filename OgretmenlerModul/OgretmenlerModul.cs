@@ -50,5 +50,10 @@ namespace OgretmenlerModul
         {
             bgl.SecimIlceListe(CmbIlce, CmbIl);
         }
+
+        private void BtnKaydet_Click(object sender, EventArgs e)
+        {
+            bgl.OgretmenBilgiKaydet(TxtAd, TxtSoyad, MskTc, MskTel, TxtMail, CmbIl, CmbIlce, RichAdres, CmbBrans);
+        }
     }
 }

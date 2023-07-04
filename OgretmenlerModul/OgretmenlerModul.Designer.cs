@@ -366,6 +366,7 @@
             this.BtnKaydet.Size = new System.Drawing.Size(154, 38);
             this.BtnKaydet.TabIndex = 19;
             this.BtnKaydet.Text = "Kaydet";
+            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
             // BtnResimSec
             // 
