@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using DevExpress.XtraEditors;
+using System.Windows.Forms;
+using DevExpress.XtraPrinting;
 
 namespace Veritabani
 {
@@ -58,6 +60,25 @@ namespace Veritabani
                 nesne.Properties.Items.Add(dr[1]);
             }
             Baglanti().Close();
+        }
+        public void OgretmenBilgiKaydet(TextEdit ad, TextEdit soyad,MaskedTextBox tc,MaskedTextBox tel,TextEdit mail,ComboBoxEdit il,ComboBoxEdit ilce,RichTextBox adres,ComboBoxEdit brans)
+        {
+            SqlCommand cmd = new SqlCommand("INSERT INTO TBL_OGRETMENLER" +
+                " (OGRTAD,OGRTSOYAD,OGRTTC,OGRTTEL,OGRTMAIL,OGRTIL,OGRTILCE,OGRTADRES,OGRTBRANS)" +
+                " VALUES (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9)",Baglanti());
+            cmd.Parameters.AddWithValue("@p1", ad.Text);
+            cmd.Parameters.AddWithValue("@p2", soyad.Text);
+            cmd.Parameters.AddWithValue("@p3", tc.Text);
+            cmd.Parameters.AddWithValue("@p4", tel.Text);
+            cmd.Parameters.AddWithValue("@p5", mail.Text);
+            cmd.Parameters.AddWithValue("@p6", il.Text);
+            cmd.Parameters.AddWithValue("@p7", ilce.Text);
+            cmd.Parameters.AddWithValue("@p8", adres.Text);
+            cmd.Parameters.AddWithValue("@p9", brans.Text);
+            cmd.ExecuteNonQuery();
+            Baglanti().Close();
+            MessageBox.Show("Personel Eklendi", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
     }
 }
