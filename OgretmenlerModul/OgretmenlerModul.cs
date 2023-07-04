@@ -44,6 +44,7 @@ namespace OgretmenlerModul
             gridControl1.DataSource = bgl.OgretmenBilgiGetir();
             bgl.IlIlceList(CmbIl, "il");
             bgl.IlIlceList(CmbIlce,"ilce");
+            bgl.BransListele(CmbBrans);
         }
 
         private void CmbIl_SelectedIndexChanged(object sender, EventArgs e)
