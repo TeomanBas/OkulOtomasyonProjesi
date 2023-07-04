@@ -45,5 +45,10 @@ namespace OgretmenlerModul
             bgl.IlIlceList(CmbIl, "il");
             bgl.IlIlceList(CmbIlce,"ilce");
         }
+
+        private void CmbIl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            bgl.SecimIlceListe(CmbIlce, CmbIl);
+        }
     }
 }

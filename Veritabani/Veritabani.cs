@@ -44,8 +44,20 @@ namespace Veritabani
                 nesne.Properties.Items.Add(dr[1]);
             }
             Baglanti().Close();
-            
-
+        }
+        public void SecimIlceListe(ComboBoxEdit nesne,ComboBoxEdit secimil)
+        {
+            nesne.Properties.Items.Clear();
+            int secim;
+            secim = secimil.SelectedIndex +1;
+            string query = "SELECT * FROM TBL_ILCE WHERE sehir="+Convert.ToString(secim);
+            SqlCommand cmd = new SqlCommand(query, Baglanti());
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                nesne.Properties.Items.Add(dr[1]);
+            }
+            Baglanti().Close();
         }
     }
 }

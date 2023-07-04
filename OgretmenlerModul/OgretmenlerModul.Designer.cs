@@ -178,6 +178,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.CmbIl.Size = new System.Drawing.Size(152, 20);
             this.CmbIl.TabIndex = 25;
+            this.CmbIl.SelectedIndexChanged += new System.EventHandler(this.CmbIl_SelectedIndexChanged);
             // 
             // MskTel
             // 
