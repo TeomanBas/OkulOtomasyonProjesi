@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Veritabani;
+using ViewMetodlari;
 
 namespace OgretmenlerModul
 {
@@ -39,6 +40,7 @@ namespace OgretmenlerModul
 
         }
         Veritabani.Veritabani bgl = new Veritabani.Veritabani();
+        ViewMetodlari.ViewMetod viewmetod = new ViewMetod();
         private void Ogretmenler_Load(object sender, EventArgs e)
         {
             gridControl1.DataSource = bgl.OgretmenBilgiGetir();
@@ -60,6 +62,11 @@ namespace OgretmenlerModul
         private void Ogretmenler_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.Dispose();
+        }
+        
+        private void gridView1_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
+        {
+            viewmetod.GridViewSatir(gridView1, TxtId, TxtAd, TxtSoyad, MskTc, MskTel, TxtMail, CmbIl, CmbIlce, RichAdres, CmbBrans);
         }
     }
 }
