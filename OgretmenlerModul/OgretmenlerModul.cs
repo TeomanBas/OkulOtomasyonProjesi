@@ -56,5 +56,10 @@ namespace OgretmenlerModul
         {
             bgl.OgretmenBilgiKaydet(TxtAd, TxtSoyad, MskTc, MskTel, TxtMail, CmbIl, CmbIlce, RichAdres, CmbBrans);
         }
+        // birden çok sayfa olduğu için bellekte hepsinin yer kaplamasına karşın çarpı butonuna tıklandığında bu form ile ilgili tüm kaynaklar serbest bırakılıyor
+        private void Ogretmenler_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DevExpress.Utils.Extensions;
 using OgretmenlerModul;
 
 namespace AnaModul
@@ -32,17 +33,18 @@ namespace AnaModul
         // OgretmenlerModul name space indeki OgretmenlerModul class ına erişim sağladık
         Ogretmenler OgretmenlerSayfasi;
         private void BtnOgretmenler_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {   
-            //bir sayfanın birden çok defa açılmaması için koşul eklendi.
-            if (OgretmenlerSayfasi==null)
+        {
+            // bir nesne üretip onun üzerinden kontrol edildiğinde sorun oluyor form üzerinden kontrol ederek problem çözüldü
+            if (Application.OpenForms["Ogretmenler"] == null)
             {
                 OgretmenlerSayfasi = new Ogretmenler();
-                // parent olan form un içerisinde olması için tanımlama yapıldı OgretmenlerModul formunu yeni pencerede
-                // değil de bu formun içerisinde açacak
                 OgretmenlerSayfasi.MdiParent = this;
                 OgretmenlerSayfasi.Show();
             }
-            
+            else 
+            {
+                Application.OpenForms["Ogretmenler"].Activate();
+            }
         }
     }
 }
