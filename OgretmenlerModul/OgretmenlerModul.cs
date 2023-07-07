@@ -68,5 +68,10 @@ namespace OgretmenlerModul
         {
             viewmetod.GridViewSatir(gridView1, TxtId, TxtAd, TxtSoyad, MskTc, MskTel, TxtMail, CmbIl, CmbIlce, RichAdres, CmbBrans);
         }
+
+        private void BtnResimSec_Click(object sender, EventArgs e)
+        {
+            viewmetod.ResimSec(PicBoxResim);
+        }
     }
 }
