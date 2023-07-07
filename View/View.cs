@@ -18,7 +18,7 @@ namespace ViewMetodlari
             ad.Text = dr["OGRTAD"].ToString();
             soyad.Text = dr["OGRTSOYAD"].ToString();
             tc.Text = dr["OGRTTC"].ToString();
-            tel.Text = dr["OGRTMAIL"].ToString();
+            tel.Text = dr["OGRTTEL"].ToString();
             mail.Text = dr["OGRTMAIL"].ToString();
             il.Text = dr["OGRTIL"].ToString();
             ilce.Text = dr["OGRTILCE"].ToString();
