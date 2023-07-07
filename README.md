@@ -13,4 +13,6 @@ ilk aşama olarak database, öğretmenler tablosu ve düşük yetkili kullanıc�
 öğretmenler penceresi;
 ![ogretmenler-modulu-1](./img/ogretmenler-modulu-veritabani-baglanti.PNG)
 
-
+## Önyüz Programlama(View)
+Öğretmenler penceresindeki GridView üzerindeki veriler, veri girişi yaptığımız  text kutularına çekildi.Bunun için View adında bir bir proje oluşturuldu ve proje içerisinde View.cs adında class sınıfı için dosya oluşturuldu.Bu dosya bizim uygulamamızın önyüz programlaması için yani view katmanı için kullacağımız metotları ve fonksiyonları içerecek bu yüzden OgretmenlerModulu içerisine referans olarak eklendi.Bu dosya içerisine tanımlanan sınıfın içerisinde GridViewSatir adında bir fonksiyon tanımlandı ve işlemler bu fonksiyonun içerisinde yapıldı.OgretmenlerModulu içerisinde bu sınıftan bir nesne türetildi bu nesne üzerinden GridViewSatir fonksiyonuna erişildi.OgretmenlerModul üzerindeki ihtiyacımız olan nesneler bu fonksiyona parametre olarak verilerek OgretmenlerModul üzerindeki nesnelerin değerleri bu fonksiyon ile tablo üzerindeki verileri giriş kutularına yani OgretmenlerModul üzerindeki nesnelerin içine aktardı.
+![gridviewdata](./img/gridview.PNG)
