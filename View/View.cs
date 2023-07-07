@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+// OpenFileDialog sınıfına erişim için System.IO sınıfı referans olarak eklendi.
+using System.IO;
 
 namespace ViewMetodlari
 {
@@ -24,6 +26,23 @@ namespace ViewMetodlari
             ilce.Text = dr["OGRTILCE"].ToString();
             adres.Text = dr["OGRTADRES"].ToString();
             brans.Text = dr["OGRTBRANS"].ToString();
+        }
+        public void ResimSec(PictureBox resimkutusu)
+        {
+            // filedialog nesnesi oluşturuldu
+            OpenFileDialog dosya = new OpenFileDialog();
+            // dialog penceresindeki dosya seçim filtreleri tanımlandı
+            dosya.Filter = "Resim Dosyası | *.jpg;*.png | Tüm Dosyalar | *.*";
+            // diaglog penceresi açıldı
+            dosya.ShowDialog();
+            // seçilen dosyanın dizin adresi alındı
+            string dosyadizin= dosya.FileName;
+            // kopyalacak yeni dizin tanımlaması yapıldı.Dizin referansları exe dosyalarından yapılıyor form anamodul altında olduğu için "Anamodul\bin\debug\anamodul.exe" referans alınıyor
+            string kaydetdizin = "..\\..\\..\\OgretmenlerModul\\Resimler\\" + Guid.NewGuid().ToString() + ".jpg";
+            // dosya yeni dizine kopyalandı
+            File.Copy(dosyadizin, kaydetdizin);
+            // picturebox'ın location değeri yeni resim dizini ile değiştirildi 
+            resimkutusu.ImageLocation = kaydetdizin;
         }
     }
 }

@@ -381,6 +381,7 @@
             this.BtnResimSec.Size = new System.Drawing.Size(154, 38);
             this.BtnResimSec.TabIndex = 18;
             this.BtnResimSec.Text = "Resim Seç";
+            this.BtnResimSec.Click += new System.EventHandler(this.BtnResimSec_Click);
             // 
             // RichAdres
             // 
