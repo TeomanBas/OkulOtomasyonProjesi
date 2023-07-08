@@ -37,7 +37,8 @@ namespace ViewMetodlari
             dosya.ShowDialog();
             // seçilen dosyanın dizin adresi alındı
             string dosyadizin= dosya.FileName;
-            // kopyalacak yeni dizin tanımlaması yapıldı.Dizin referansları exe dosyalarından yapılıyor form anamodul altında olduğu için "Anamodul\bin\debug\anamodul.exe" referans alınıyor
+            // kopyalacak yeni dizin tanımlaması yapıldı.Dizin referansları exe dosyalarından yapılıyor
+            // form anamodul altında olduğu için "Anamodul\bin\debug\anamodul.exe" referans alınıyor
             string kaydetdizin = "..\\..\\..\\OgretmenlerModul\\Resimler\\" + Guid.NewGuid().ToString() + ".jpg";
             // dosya yeni dizine kopyalandı
             File.Copy(dosyadizin, kaydetdizin);
