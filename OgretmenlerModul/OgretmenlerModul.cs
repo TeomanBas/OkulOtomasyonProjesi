@@ -56,7 +56,7 @@ namespace OgretmenlerModul
 
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
-            bgl.OgretmenBilgiKaydet(TxtAd, TxtSoyad, MskTc, MskTel, TxtMail, CmbIl, CmbIlce, RichAdres, CmbBrans);
+            bgl.OgretmenBilgiKaydet(TxtAd, TxtSoyad, MskTc, MskTel, TxtMail, CmbIl, CmbIlce, RichAdres, CmbBrans, PicBoxResim);
         }
         // birden çok sayfa olduğu için bellekte hepsinin yer kaplamasına karşın çarpı butonuna tıklandığında bu form ile ilgili tüm kaynaklar serbest bırakılıyor
         private void Ogretmenler_FormClosing(object sender, FormClosingEventArgs e)
@@ -66,7 +66,7 @@ namespace OgretmenlerModul
         
         private void gridView1_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
         {
-            viewmetod.GridViewSatir(gridView1, TxtId, TxtAd, TxtSoyad, MskTc, MskTel, TxtMail, CmbIl, CmbIlce, RichAdres, CmbBrans);
+            viewmetod.GridViewSatir(gridView1, TxtId, TxtAd, TxtSoyad, MskTc, MskTel, TxtMail, CmbIl, CmbIlce, RichAdres, CmbBrans, PicBoxResim);
         }
 
         private void BtnResimSec_Click(object sender, EventArgs e)
