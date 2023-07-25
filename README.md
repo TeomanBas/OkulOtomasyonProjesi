@@ -24,7 +24,12 @@ FileDialog penceresinden bir resmin seçildiğinde belirtilen göreceli dizine k
 ![filedialog](./img/FileDialog.PNG)
 ![resimsec](./img/ResimSecButonu.PNG)
 
-### Update Butonu
+### Güncelle Butonu
 Update butonu için Veritabanı fonksiyonu yazıldı ve update butonuna entegre edildi.
-![update-1](./img/updatebutonu-1.PNG
-![update-2](./img/updatebutonu-2.PNG))
+![update-1](./img/updatebutonu-1.PNG)
+![update-2](./img/updatebutonu-2.PNG)
+
+### Sil Butonu
+Öğretmenler tablosundan kayıt silmek için Veritabanı fonksiyonu yazıldı ve entegre edildi.
+![kayitsil-1](./img/ogretmenkayitsil-1.PNG)
+![kayitsil-2](./img/ogretmenkayitsil-2.PNG)
