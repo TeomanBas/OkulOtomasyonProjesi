@@ -80,5 +80,11 @@ namespace OgretmenlerModul
             bgl.OgretmenBilgiGuncelle(TxtAd, TxtSoyad, MskTc, MskTel, TxtMail, CmbIl, CmbIlce, RichAdres, CmbBrans, PicBoxResim,TxtId);
             gridControl1.DataSource = bgl.OgretmenBilgiGetir();
         }
+
+        private void BtnSil_Click(object sender, EventArgs e)
+        {
+            bgl.OgretmenKayitSil(TxtId);
+            gridControl1.DataSource = bgl.OgretmenBilgiGetir();
+        }
     }
 }
