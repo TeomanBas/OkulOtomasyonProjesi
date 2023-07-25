@@ -117,5 +117,13 @@ namespace Veritabani
             MessageBox.Show("Personel Bilgileri Güncellendi", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
+        public void OgretmenKayitSil(TextEdit id)
+        {
+            SqlCommand cmd = new SqlCommand("DELETE FROM TBL_OGRETMENLER WHERE OGRTID=@p1",Baglanti());
+            cmd.Parameters.AddWithValue("@p1",id.Text);
+            cmd.ExecuteNonQuery();
+            Baglanti() .Close();
+            MessageBox.Show("Personel Silindi", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
     }
 }
