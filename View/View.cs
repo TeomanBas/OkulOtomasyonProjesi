@@ -13,7 +13,9 @@ namespace ViewMetodlari
 {
     public class ViewMetod
     {
-        public void GridViewSatir(DevExpress.XtraGrid.Views.Grid.GridView grid,TextEdit id,TextEdit ad, TextEdit soyad, MaskedTextBox tc,MaskedTextBox tel,TextEdit mail,ComboBoxEdit il,ComboBoxEdit ilce,RichTextBox adres,ComboBoxEdit brans)
+        public void GridViewSatir(DevExpress.XtraGrid.Views.Grid.GridView grid,TextEdit id,
+            TextEdit ad, TextEdit soyad, MaskedTextBox tc,MaskedTextBox tel,TextEdit mail,
+            ComboBoxEdit il,ComboBoxEdit ilce,RichTextBox adres,ComboBoxEdit brans, PictureBox resimkutusu)
         {
             DataRow dr = grid.GetDataRow(grid.FocusedRowHandle);
             id.Text = dr["OGRTID"].ToString();
@@ -26,6 +28,8 @@ namespace ViewMetodlari
             ilce.Text = dr["OGRTILCE"].ToString();
             adres.Text = dr["OGRTADRES"].ToString();
             brans.Text = dr["OGRTBRANS"].ToString();
+            resimkutusu.ImageLocation = dr["OGRTFOTO"].ToString();
+
         }
         public void ResimSec(PictureBox resimkutusu)
         {
