@@ -23,3 +23,8 @@ ilk aşama olarak database, öğretmenler tablosu ve düşük yetkili kullanıc�
 FileDialog penceresinden bir resmin seçildiğinde belirtilen göreceli dizine kopyalanması sağlandı.Bu resim öğretmenlerin resmi profil resmi olmalıdır.
 ![filedialog](./img/FileDialog.PNG)
 ![resimsec](./img/ResimSecButonu.PNG)
+
+### Update Butonu
+Update butonu için Veritabanı fonksiyonu yazıldı ve update butonuna entegre edildi.
+![update-1](./img/updatebutonu-1.PNG
+![update-2](./img/updatebutonu-2.PNG))

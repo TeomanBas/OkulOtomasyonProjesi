@@ -74,5 +74,11 @@ namespace OgretmenlerModul
         {
             viewmetod.ResimSec(PicBoxResim);
         }
+
+        private void BtnGuncelle_Click(object sender, EventArgs e)
+        {
+            bgl.OgretmenBilgiGuncelle(TxtAd, TxtSoyad, MskTc, MskTel, TxtMail, CmbIl, CmbIlce, RichAdres, CmbBrans, PicBoxResim,TxtId);
+            gridControl1.DataSource = bgl.OgretmenBilgiGetir();
+        }
     }
 }
