@@ -21,3 +21,5 @@ ilk aşama olarak database, öğretmenler tablosu ve düşük yetkili kullanıc�
 
 ### Resim Seç Butonu
 FileDialog penceresinden bir resmin seçildiğinde belirtilen göreceli dizine kopyalanması sağlandı.Bu resim öğretmenlerin resmi profil resmi olmalıdır.
+![filedialog](./img/FileDialog.PNG)
+![resimsec](./img/ResimSecButonu.PNG)
