@@ -57,6 +57,7 @@ namespace OgretmenlerModul
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
             bgl.OgretmenBilgiKaydet(TxtAd, TxtSoyad, MskTc, MskTel, TxtMail, CmbIl, CmbIlce, RichAdres, CmbBrans, PicBoxResim);
+            gridControl1.DataSource = bgl.OgretmenBilgiGetir();
         }
         // birden çok sayfa olduğu için bellekte hepsinin yer kaplamasına karşın çarpı butonuna tıklandığında bu form ile ilgili tüm kaynaklar serbest bırakılıyor
         private void Ogretmenler_FormClosing(object sender, FormClosingEventArgs e)
