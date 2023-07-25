@@ -40,10 +40,15 @@ namespace ViewMetodlari
             // kopyalacak yeni dizin tanımlaması yapıldı.Dizin referansları exe dosyalarından yapılıyor
             // form anamodul altında olduğu için "Anamodul\bin\debug\anamodul.exe" referans alınıyor
             string kaydetdizin = "..\\..\\..\\OgretmenlerModul\\Resimler\\" + Guid.NewGuid().ToString() + ".jpg";
-            // dosya yeni dizine kopyalandı
-            File.Copy(dosyadizin, kaydetdizin);
-            // picturebox'ın location değeri yeni resim dizini ile değiştirildi 
-            resimkutusu.ImageLocation = kaydetdizin;
+            // dosyanın seçilmemesi durumuna karşın kopyalama işlemi atlanıyor
+            if (dosyadizin != "")
+            {
+                // dosya yeni dizine kopyalandı
+                File.Copy(dosyadizin, kaydetdizin);
+                // picturebox'ın location değeri yeni resim dizini ile değiştirildi 
+                resimkutusu.ImageLocation = kaydetdizin;
+            }
+            
         }
     }
 }

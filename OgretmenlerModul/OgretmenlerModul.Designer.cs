@@ -154,6 +154,7 @@
             this.PicBoxResim.Location = new System.Drawing.Point(98, 5);
             this.PicBoxResim.Name = "PicBoxResim";
             this.PicBoxResim.Size = new System.Drawing.Size(152, 154);
+            this.PicBoxResim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBoxResim.TabIndex = 28;
             this.PicBoxResim.TabStop = false;
             // 
