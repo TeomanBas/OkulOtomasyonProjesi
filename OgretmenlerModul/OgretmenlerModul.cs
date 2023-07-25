@@ -47,6 +47,7 @@ namespace OgretmenlerModul
             bgl.IlIlceList(CmbIl, "il");
             bgl.IlIlceList(CmbIlce,"ilce");
             bgl.BransListele(CmbBrans);
+            viewmetod.Temizle(TxtId, TxtAd, TxtSoyad, TxtMail, MskTc, MskTel, CmbBrans, CmbIl, CmbIlce, PicBoxResim, RichAdres);
         }
 
         private void CmbIl_SelectedIndexChanged(object sender, EventArgs e)
@@ -85,6 +86,11 @@ namespace OgretmenlerModul
         {
             bgl.OgretmenKayitSil(TxtId);
             gridControl1.DataSource = bgl.OgretmenBilgiGetir();
+        }
+
+        private void BtnTemizle_Click(object sender, EventArgs e)
+        {
+            viewmetod.Temizle(TxtId,TxtAd,TxtSoyad,TxtMail,MskTc,MskTel,CmbBrans,CmbIl,CmbIlce,PicBoxResim,RichAdres);
         }
     }
 }

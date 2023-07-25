@@ -226,6 +226,7 @@
             // 
             // TxtId
             // 
+            this.TxtId.Enabled = false;
             this.TxtId.Location = new System.Drawing.Point(98, 180);
             this.TxtId.Name = "TxtId";
             this.TxtId.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -347,6 +348,7 @@
             this.BtnTemizle.Size = new System.Drawing.Size(154, 38);
             this.BtnTemizle.TabIndex = 22;
             this.BtnTemizle.Text = "Temizle";
+            this.BtnTemizle.Click += new System.EventHandler(this.BtnTemizle_Click);
             // 
             // BtnGuncelle
             // 

@@ -33,3 +33,6 @@ Update butonu için Veritabanı fonksiyonu yazıldı ve update butonuna entegre 
 Öğretmenler tablosundan kayıt silmek için Veritabanı fonksiyonu yazıldı ve entegre edildi.
 ![kayitsil-1](./img/ogretmenkayitsil-1.PNG)
 ![kayitsil-2](./img/ogretmenkayitsil-2.PNG)
+
+### Temizle Butonu
+Temizle butonu için view sınıfına metod yazıldı, ve öğretmenler penceresine entegre edildi ardından öğretmenler penceresindeki id kısmına müdahale edilememesi için Enable özelliği false olarak değiştirildi.
