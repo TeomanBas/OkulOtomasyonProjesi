@@ -54,5 +54,21 @@ namespace ViewMetodlari
             }
             
         }
+        public void Temizle(TextEdit TxtId, TextEdit TxtAd, TextEdit TxtSoyad, TextEdit TxtMail,
+            MaskedTextBox MskTc, MaskedTextBox MskTel,ComboBoxEdit CmbBrans, ComboBoxEdit CmbIl, ComboBoxEdit CmbIlce,
+            PictureBox PicBoxResim,RichTextBox RichAdres)
+        {
+            TxtId.Clear();
+            TxtAd.Clear();
+            TxtSoyad.Clear();
+            TxtMail.Clear();
+            MskTc.Clear();
+            MskTel.Clear();
+            CmbBrans.Clear();
+            CmbIl.Clear();
+            CmbIlce.Clear();
+            PicBoxResim.ImageLocation="";
+            RichAdres.Clear();
+        }
     }
 }
