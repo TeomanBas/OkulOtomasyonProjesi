@@ -49,25 +49,41 @@ namespace ViewMetodlari
             // diaglog penceresi açıldı
             dosya.ShowDialog();
             // seçilen dosyanın dizin adresi alındı
-            string dosyadizin= dosya.FileName;
-            // burada kayit dizini release çıkıldığında değiştirilmesi gerekli bu dizin debug için geçerlidir.!!!
-            string kayitdizini = @"..\..\..\OgretmenlerModul\Resimler";
-            // dizin kontrolü
-            if (!File.Exists(kayitdizini))
-            {
-                Directory.CreateDirectory(kayitdizini);
-            }
-            // kopyalacak yeni dizin tanımlaması yapıldı.Dizin referansları exe dosyalarından yapılıyor
-            // form anamodul altında olduğu için "Anamodul\bin\debug\anamodul.exe" referans alınıyor
-            string kaydetdizin = kayitdizini +@"\"+ Guid.NewGuid().ToString() + ".jpg";
-            // dosyanın seçilmemesi durumuna karşın kopyalama işlemi atlanıyor
+            string dosyadizin = dosya.FileName;
+            // dosyanın seçilmemesi durumu kontrol ediliyor.
             if (dosyadizin != "")
             {
-                // dosya yeni dizine kopyalandı
-                File.Copy(dosyadizin, kaydetdizin);
-                // picturebox'ın location değeri yeni resim dizini ile değiştirildi 
-                resimkutusu.ImageLocation = kaydetdizin;
+            //seçilen dosyanın boyutu kontrol ediliyor.
+            FileInfo dosyabilgi = new FileInfo(dosyadizin); 
+            long dosyaboyutu = dosyabilgi.Length; // byte 
+                if (dosyaboyutu <= 5 * 1024 * 1024)
+                {
+                    // burada kayit dizini release çıkıldığında değiştirilmesi gerekli bu dizin debug için geçerlidir.!!!
+                    string kayitdizini = @"..\..\..\OgretmenlerModul\Resimler";
+                    // dizin kontrolü
+                    if (!File.Exists(kayitdizini))
+                    {
+                        Directory.CreateDirectory(kayitdizini);
+                    }
+                    // kopyalacak yeni dizin tanımlaması yapıldı.Dizin referansları exe dosyalarından yapılıyor
+                    // form anamodul altında olduğu için "Anamodul\bin\debug\anamodul.exe" referans alınıyor
+                    string kaydetdizin = kayitdizini + @"\" + Guid.NewGuid().ToString() + ".jpg";
+                    // dosya yeni dizine kopyalandı
+                    File.Copy(dosyadizin, kaydetdizin);
+                    // picturebox'ın location değeri yeni resim dizini ile değiştirildi 
+                    resimkutusu.ImageLocation = kaydetdizin;
+                }
+                else
+                {
+                    dosyadizin = "";
+                    MessageBox.Show("Dosya Boyutu 5 MB'den büyük olamaz.", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
+
+            
+
+
+           
             
         }
 
