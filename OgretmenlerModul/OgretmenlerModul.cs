@@ -39,58 +39,54 @@ namespace OgretmenlerModul
         {
 
         }
-        Veritabani.Veritabani bgl = new Veritabani.Veritabani();
-        ViewMetodlari.ViewMetod viewmetod = new ViewMetod();
+
         private void Ogretmenler_Load(object sender, EventArgs e)
         {
-            gridControl1.DataSource = bgl.OgretmenBilgiGetir();
-            bgl.IlIlceList(CmbIl, "il");
-            bgl.IlIlceList(CmbIlce,"ilce");
-            bgl.BransListele(CmbBrans);
-            viewmetod.Temizle(TxtId, TxtAd, TxtSoyad, TxtMail, MskTc, MskTel, CmbBrans, CmbIl, CmbIlce, PicBoxResim, RichAdres);
+            ViewMetod.Listele(gridControl1,TxtId, TxtAd, TxtSoyad, TxtMail, MskTc, MskTel, CmbBrans, CmbIl, CmbIlce, PicBoxResim, RichAdres);
         }
 
         private void CmbIl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            bgl.SecimIlceListe(CmbIlce, CmbIl);
+            ViewMetod.SecimIlceListe(CmbIlce, CmbIl);
         }
 
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
-            bgl.OgretmenBilgiKaydet(TxtAd, TxtSoyad, MskTc, MskTel, TxtMail, CmbIl, CmbIlce, RichAdres, CmbBrans, PicBoxResim);
-            gridControl1.DataSource = bgl.OgretmenBilgiGetir();
-        }
-        // birden çok sayfa olduğu için bellekte hepsinin yer kaplamasına karşın çarpı butonuna tıklandığında bu form ile ilgili tüm kaynaklar serbest bırakılıyor
-        private void Ogretmenler_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            this.Dispose();
-        }
-        
-        private void gridView1_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
-        {
-            viewmetod.GridViewSatir(gridView1, TxtId, TxtAd, TxtSoyad, MskTc, MskTel, TxtMail, CmbIl, CmbIlce, RichAdres, CmbBrans, PicBoxResim);
+            ViewMetod.OgretmenBilgiKaydet(TxtAd, TxtSoyad, MskTc, MskTel, TxtMail, CmbIl, CmbIlce, RichAdres, CmbBrans, PicBoxResim);
+            ViewMetod.KayitListeYenile(gridControl1);
         }
 
+        private void Ogretmenler_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // birden çok sayfa olduğu için bellekte hepsinin yer kaplamasına karşın çarpı butonuna tıklandığında bu form ile ilgili tüm kaynaklar serbest bırakılıyor
+            this.Dispose();
+        }
+
+        private void gridView1_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
+        {
+            ViewMetod.GridViewSatir(gridView1, TxtId, TxtAd, TxtSoyad, MskTc, MskTel, TxtMail, CmbIl, CmbIlce, RichAdres, CmbBrans, PicBoxResim);
+        }
         private void BtnResimSec_Click(object sender, EventArgs e)
         {
-            viewmetod.ResimSec(PicBoxResim);
+            ViewMetod.ResimSec(PicBoxResim);
         }
 
         private void BtnGuncelle_Click(object sender, EventArgs e)
         {
-            bgl.OgretmenBilgiGuncelle(TxtAd, TxtSoyad, MskTc, MskTel, TxtMail, CmbIl, CmbIlce, RichAdres, CmbBrans, PicBoxResim,TxtId);
-            gridControl1.DataSource = bgl.OgretmenBilgiGetir();
+            ViewMetod.OgretmenBilgiGuncelle(TxtAd, TxtSoyad, MskTc, MskTel, TxtMail, CmbIl, CmbIlce, RichAdres, CmbBrans, PicBoxResim,TxtId);
+            ViewMetod.KayitListeYenile(gridControl1);
         }
 
         private void BtnSil_Click(object sender, EventArgs e)
         {
-            bgl.OgretmenKayitSil(TxtId);
-            gridControl1.DataSource = bgl.OgretmenBilgiGetir();
+            ViewMetod.OgretmenKayitSil(TxtId);
+            ViewMetod.KayitListeYenile(gridControl1);
         }
 
         private void BtnTemizle_Click(object sender, EventArgs e)
         {
-            viewmetod.Temizle(TxtId,TxtAd,TxtSoyad,TxtMail,MskTc,MskTel,CmbBrans,CmbIl,CmbIlce,PicBoxResim,RichAdres);
+            ViewMetod.Temizle(TxtId,TxtAd,TxtSoyad,TxtMail,MskTc,MskTel,CmbBrans,CmbIl,CmbIlce,PicBoxResim,RichAdres);
         }
+
     }
 }
