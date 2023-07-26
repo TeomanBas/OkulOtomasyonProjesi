@@ -124,11 +124,20 @@ namespace ViewMetodlari
             db().SecimIlceListe(CmbIlce, CmbIl);
         }
 
-        public static void OgretmenBilgiKaydet(TextEdit ad, TextEdit soyad, MaskedTextBox tc,
+        public static void OgretmenBilgiKaydet(TextEdit id,TextEdit ad, TextEdit soyad, MaskedTextBox tc,
             MaskedTextBox tel, TextEdit mail, ComboBoxEdit il,
             ComboBoxEdit ilce, RichTextBox adres, ComboBoxEdit brans, PictureBox resimkutusu)
         {
-            db().OgretmenBilgiKaydet(ad, soyad, tc, tel, mail, il, ilce, adres, brans, ResimKopyala(resimkutusu.ImageLocation));
+            if (id.Text != "")
+            {
+                MessageBox.Show("Personel eklemek için önce personel bilgilerini temizleyin",
+                    "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                db().OgretmenBilgiKaydet(ad, soyad, tc, tel, mail, il, ilce, adres, brans, ResimKopyala(resimkutusu.ImageLocation));
+
+            }
         }
 
         public static void OgretmenBilgiGuncelle(TextEdit ad, TextEdit soyad, MaskedTextBox tc,

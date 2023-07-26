@@ -52,7 +52,7 @@ namespace OgretmenlerModul
 
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
-            ViewMetod.OgretmenBilgiKaydet(TxtAd, TxtSoyad, MskTc, MskTel, TxtMail, CmbIl, CmbIlce, RichAdres, CmbBrans, PicBoxResim);
+            ViewMetod.OgretmenBilgiKaydet(TxtId,TxtAd, TxtSoyad, MskTc, MskTel, TxtMail, CmbIl, CmbIlce, RichAdres, CmbBrans, PicBoxResim);
             ViewMetod.KayitListeYenile(gridControl1);
         }
 
