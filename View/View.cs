@@ -8,12 +8,20 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 // OpenFileDialog sınıfına erişim için System.IO sınıfı referans olarak eklendi.
 using System.IO;
+using DevExpress.XtraGrid;
+using Veritabani;
+using System.Runtime.CompilerServices;
 
 namespace ViewMetodlari
 {
     public class ViewMetod
     {
-        public void GridViewSatir(DevExpress.XtraGrid.Views.Grid.GridView grid,TextEdit id,
+        private static Veritabani.Veritabani db()
+        {
+            Veritabani.Veritabani database = new Veritabani.Veritabani();
+            return database;
+        }
+        public static void GridViewSatir(DevExpress.XtraGrid.Views.Grid.GridView grid,TextEdit id,
             TextEdit ad, TextEdit soyad, MaskedTextBox tc,MaskedTextBox tel,TextEdit mail,
             ComboBoxEdit il,ComboBoxEdit ilce,RichTextBox adres,ComboBoxEdit brans, PictureBox resimkutusu)
         {
@@ -31,7 +39,8 @@ namespace ViewMetodlari
             resimkutusu.ImageLocation = dr["OGRTFOTO"].ToString();
 
         }
-        public void ResimSec(PictureBox resimkutusu)
+
+        public static void ResimSec(PictureBox resimkutusu)
         {
             // filedialog nesnesi oluşturuldu
             OpenFileDialog dosya = new OpenFileDialog();
@@ -54,7 +63,8 @@ namespace ViewMetodlari
             }
             
         }
-        public void Temizle(TextEdit TxtId, TextEdit TxtAd, TextEdit TxtSoyad, TextEdit TxtMail,
+
+        public static void Temizle(TextEdit TxtId, TextEdit TxtAd, TextEdit TxtSoyad, TextEdit TxtMail,
             MaskedTextBox MskTc, MaskedTextBox MskTel,ComboBoxEdit CmbBrans, ComboBoxEdit CmbIl, ComboBoxEdit CmbIlce,
             PictureBox PicBoxResim,RichTextBox RichAdres)
         {
@@ -70,5 +80,46 @@ namespace ViewMetodlari
             PicBoxResim.ImageLocation="";
             RichAdres.Clear();
         }
+
+        public static void Listele(GridControl grid,TextEdit TxtId, TextEdit TxtAd, TextEdit TxtSoyad, TextEdit TxtMail,
+            MaskedTextBox MskTc, MaskedTextBox MskTel, ComboBoxEdit CmbBrans, ComboBoxEdit CmbIl, ComboBoxEdit CmbIlce,
+            PictureBox PicBoxResim, RichTextBox RichAdres)
+        {
+            grid.DataSource = db().OgretmenBilgiGetir();
+            db().IlIlceList(CmbIl, "il");
+            db().IlIlceList(CmbIlce, "ilce");
+            db().BransListele(CmbBrans);
+            ViewMetod.Temizle(TxtId, TxtAd, TxtSoyad, TxtMail, MskTc, MskTel, CmbBrans, CmbIl, CmbIlce, PicBoxResim, RichAdres);
+        }
+
+        public static void KayitListeYenile(GridControl grid)
+        {
+            grid.DataSource = db().OgretmenBilgiGetir();
+        }
+
+        public static void SecimIlceListe(ComboBoxEdit CmbIlce, ComboBoxEdit CmbIl)
+        {
+            db().SecimIlceListe(CmbIlce, CmbIl);
+        }
+
+        public static void OgretmenBilgiKaydet(TextEdit ad, TextEdit soyad, MaskedTextBox tc,
+            MaskedTextBox tel, TextEdit mail, ComboBoxEdit il,
+            ComboBoxEdit ilce, RichTextBox adres, ComboBoxEdit brans, PictureBox resimkutusu)
+        {
+            db().OgretmenBilgiKaydet(ad, soyad, tc, tel, mail, il, ilce, adres, brans, resimkutusu);
+        }
+
+        public static void OgretmenBilgiGuncelle(TextEdit ad, TextEdit soyad, MaskedTextBox tc,
+          MaskedTextBox tel, TextEdit mail, ComboBoxEdit il, ComboBoxEdit ilce, RichTextBox adres,
+          ComboBoxEdit brans, PictureBox resimkutusu, TextEdit id)
+        {
+            db().OgretmenBilgiKaydet(ad, soyad, tc, tel, mail, il, ilce, adres, brans, resimkutusu);
+        }
+
+        public static void OgretmenKayitSil(TextEdit id)
+        {
+            db().OgretmenKayitSil(id);
+        }
     }
+
 }
