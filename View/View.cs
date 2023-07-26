@@ -50,9 +50,16 @@ namespace ViewMetodlari
             dosya.ShowDialog();
             // seçilen dosyanın dizin adresi alındı
             string dosyadizin= dosya.FileName;
+            // burada kayit dizini release çıkıldığında değiştirilmesi gerekli bu dizin debug için geçerlidir.!!!
+            string kayitdizini = @"..\..\..\OgretmenlerModul\Resimler";
+            // dizin kontrolü
+            if (!File.Exists(kayitdizini))
+            {
+                Directory.CreateDirectory(kayitdizini);
+            }
             // kopyalacak yeni dizin tanımlaması yapıldı.Dizin referansları exe dosyalarından yapılıyor
             // form anamodul altında olduğu için "Anamodul\bin\debug\anamodul.exe" referans alınıyor
-            string kaydetdizin = "..\\..\\..\\OgretmenlerModul\\Resimler\\" + Guid.NewGuid().ToString() + ".jpg";
+            string kaydetdizin = kayitdizini +@"\"+ Guid.NewGuid().ToString() + ".jpg";
             // dosyanın seçilmemesi durumuna karşın kopyalama işlemi atlanıyor
             if (dosyadizin != "")
             {
