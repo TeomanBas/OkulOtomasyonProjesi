@@ -436,8 +436,9 @@
             this.ClientSize = new System.Drawing.Size(978, 588);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.gridControl1);
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("Ogretmenler.IconOptions.Image")));
             this.Name = "Ogretmenler";
-            this.Text = "Form1";
+            this.Text = "Öğretmenler";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Ogretmenler_FormClosing);
             this.Load += new System.EventHandler(this.Ogretmenler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();

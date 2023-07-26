@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnaModul));
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
@@ -44,7 +45,7 @@
             this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar();
+            this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar(this.components);
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -106,8 +107,8 @@
             // 
             this.BtnOgretmenler.Caption = "ÖĞRETMENLER";
             this.BtnOgretmenler.Id = 2;
-            this.BtnOgretmenler.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.BtnOgretmenler.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.BtnOgretmenler.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnOgretmenler.ImageOptions.Image")));
+            this.BtnOgretmenler.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnOgretmenler.ImageOptions.LargeImage")));
             this.BtnOgretmenler.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnOgretmenler.ItemAppearance.Hovered.Options.UseFont = true;
             this.BtnOgretmenler.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -332,13 +333,14 @@
             this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem12);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             // 
-            // FrmAnaModul
+            // AnaModul
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(978, 688);
             this.Controls.Add(ribbonControl1);
-            this.Name = "FrmAnaModul";
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("AnaModul.IconOptions.Image")));
+            this.Name = "AnaModul";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bilim Ortaokulu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
