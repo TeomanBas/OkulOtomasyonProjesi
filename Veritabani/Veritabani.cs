@@ -63,7 +63,7 @@ namespace Veritabani
         }
         public void OgretmenBilgiKaydet(TextEdit ad, TextEdit soyad,MaskedTextBox tc,
             MaskedTextBox tel,TextEdit mail,ComboBoxEdit il,
-            ComboBoxEdit ilce,RichTextBox adres,ComboBoxEdit brans,PictureBox resimkutusu)
+            ComboBoxEdit ilce,RichTextBox adres,ComboBoxEdit brans,string hedefresimkaynak)
         {
             SqlCommand cmd = new SqlCommand("INSERT INTO TBL_OGRETMENLER" +
                 " (OGRTAD,OGRTSOYAD,OGRTTC,OGRTTEL,OGRTMAIL,OGRTIL,OGRTILCE,OGRTADRES,OGRTBRANS,OGRTFOTO)" +
@@ -77,7 +77,7 @@ namespace Veritabani
             cmd.Parameters.AddWithValue("@p7", ilce.Text);
             cmd.Parameters.AddWithValue("@p8", adres.Text);
             cmd.Parameters.AddWithValue("@p9", brans.Text);
-            cmd.Parameters.AddWithValue("@p10", resimkutusu.ImageLocation);
+            cmd.Parameters.AddWithValue("@p10", hedefresimkaynak);
             cmd.ExecuteNonQuery();
             Baglanti().Close();
             MessageBox.Show("Personel Eklendi", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);

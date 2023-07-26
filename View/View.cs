@@ -58,20 +58,8 @@ namespace ViewMetodlari
             long dosyaboyutu = dosyabilgi.Length; // byte 
                 if (dosyaboyutu <= 5 * 1024 * 1024)
                 {
-                    // burada kayit dizini release çıkıldığında değiştirilmesi gerekli bu dizin debug için geçerlidir.!!!
-                    string kayitdizini = @"..\..\..\OgretmenlerModul\Resimler";
-                    // dizin kontrolü
-                    if (!File.Exists(kayitdizini))
-                    {
-                        Directory.CreateDirectory(kayitdizini);
-                    }
-                    // kopyalacak yeni dizin tanımlaması yapıldı.Dizin referansları exe dosyalarından yapılıyor
-                    // form anamodul altında olduğu için "Anamodul\bin\debug\anamodul.exe" referans alınıyor
-                    string kaydetdizin = kayitdizini + @"\" + Guid.NewGuid().ToString() + ".jpg";
-                    // dosya yeni dizine kopyalandı
-                    File.Copy(dosyadizin, kaydetdizin);
                     // picturebox'ın location değeri yeni resim dizini ile değiştirildi 
-                    resimkutusu.ImageLocation = kaydetdizin;
+                    resimkutusu.ImageLocation = dosyadizin;
                 }
                 else
                 {
@@ -79,12 +67,23 @@ namespace ViewMetodlari
                     MessageBox.Show("Dosya Boyutu 5 MB'den büyük olamaz.", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+        public static string ResimKopyala(string kaynak)
+        {
+            // burada kayit dizini release çıkıldığında değiştirilmesi gerekli bu dizin debug için geçerlidir.!!!
+            string hedef = @"..\..\..\OgretmenlerModul\Resimler";
+            // dizin kontrolü
+            if (!File.Exists(hedef))
+            {
+                Directory.CreateDirectory(hedef);
+            }
+            // kopyalacak yeni dizin tanımlaması yapıldı.Dizin referansları exe dosyalarından yapılıyor
+            // form anamodul altında olduğu için "Anamodul\bin\debug\anamodul.exe" referans alınıyor
+            string hedefdosya = hedef + @"\" + Guid.NewGuid().ToString() + ".jpg";
 
-            
-
-
-           
-            
+            // dosya yeni dizine kopyalandı
+            File.Copy(kaynak, hedefdosya);
+            return hedefdosya;
         }
 
         public static void Temizle(TextEdit TxtId, TextEdit TxtAd, TextEdit TxtSoyad, TextEdit TxtMail,
@@ -129,14 +128,14 @@ namespace ViewMetodlari
             MaskedTextBox tel, TextEdit mail, ComboBoxEdit il,
             ComboBoxEdit ilce, RichTextBox adres, ComboBoxEdit brans, PictureBox resimkutusu)
         {
-            db().OgretmenBilgiKaydet(ad, soyad, tc, tel, mail, il, ilce, adres, brans, resimkutusu);
+            db().OgretmenBilgiKaydet(ad, soyad, tc, tel, mail, il, ilce, adres, brans, ResimKopyala(resimkutusu.ImageLocation));
         }
 
         public static void OgretmenBilgiGuncelle(TextEdit ad, TextEdit soyad, MaskedTextBox tc,
           MaskedTextBox tel, TextEdit mail, ComboBoxEdit il, ComboBoxEdit ilce, RichTextBox adres,
           ComboBoxEdit brans, PictureBox resimkutusu, TextEdit id)
         {
-            db().OgretmenBilgiKaydet(ad, soyad, tc, tel, mail, il, ilce, adres, brans, resimkutusu);
+            db().OgretmenBilgiGuncelle(ad, soyad, tc, tel, mail, il, ilce, adres, brans, resimkutusu,id);
         }
 
         public static void OgretmenKayitSil(TextEdit id)
