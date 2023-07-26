@@ -135,7 +135,7 @@ namespace ViewMetodlari
           MaskedTextBox tel, TextEdit mail, ComboBoxEdit il, ComboBoxEdit ilce, RichTextBox adres,
           ComboBoxEdit brans, PictureBox resimkutusu, TextEdit id)
         {
-            db().OgretmenBilgiGuncelle(ad, soyad, tc, tel, mail, il, ilce, adres, brans, resimkutusu,id);
+            db().OgretmenBilgiGuncelle(ad, soyad, tc, tel, mail, il, ilce, adres, brans, ResimKopyala(resimkutusu.ImageLocation), id);
         }
 
         public static void OgretmenKayitSil(TextEdit id)

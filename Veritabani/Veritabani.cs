@@ -95,7 +95,7 @@ namespace Veritabani
         }
         public void OgretmenBilgiGuncelle(TextEdit ad, TextEdit soyad, MaskedTextBox tc,
            MaskedTextBox tel, TextEdit mail, ComboBoxEdit il, ComboBoxEdit ilce, RichTextBox adres, 
-           ComboBoxEdit brans, PictureBox resimkutusu, TextEdit id)
+           ComboBoxEdit brans, string resimkutusu, TextEdit id)
         {
             SqlCommand cmd = new SqlCommand("UPDATE TBL_OGRETMENLER SET" +
                 " OGRTAD=@p1,OGRTSOYAD=@p2,OGRTTC=@p3,OGRTTEL=@p4,OGRTMAIL=@p5,OGRTIL=@p6,OGRTILCE=@p7,OGRTADRES=@p8,OGRTBRANS=@p9,OGRTFOTO=@p10 " +
@@ -109,7 +109,7 @@ namespace Veritabani
             cmd.Parameters.AddWithValue("@p7", ilce.Text);
             cmd.Parameters.AddWithValue("@p8", adres.Text);
             cmd.Parameters.AddWithValue("@p9", brans.Text);
-            cmd.Parameters.AddWithValue("@p10", resimkutusu.ImageLocation);
+            cmd.Parameters.AddWithValue("@p10", resimkutusu);
             cmd.Parameters.AddWithValue("@p11", id.Text);
 
             cmd.ExecuteNonQuery();
