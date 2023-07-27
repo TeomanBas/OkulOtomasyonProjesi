@@ -131,8 +131,10 @@ namespace Veritabani
             DataTable dt = new DataTable();
             string query="SELECT * FROM TBL_OGRENCILER WHERE OGRSINIF='"+sinif+"'";
             SqlDataAdapter da = new SqlDataAdapter(query, Baglanti());
+            Baglanti().Close();
             da.Fill(dt);
             return dt;
+            
         }
     }
 }
