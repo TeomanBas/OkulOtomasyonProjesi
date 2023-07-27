@@ -40,6 +40,31 @@ namespace ViewMetodlari
             resimkutusu.ImageLocation = dr["OGRTFOTO"].ToString();
 
         }
+        public static void GridViewSatir(GridView grid, TextEdit TxtId, TextEdit TxtAd, TextEdit TxtSoyad, MaskedTextBox MskTc,MaskedTextBox MskOgrenciNo, 
+            RadioButton rdbtnerkek, RadioButton rdbtnkadin,DateEdit dogum, GridLookUpEdit veli,
+            ComboBoxEdit CmbIL, ComboBoxEdit CmbIlce,RichTextBox RchAdres,PictureBox ogrresim)
+        {
+            DataRow dr = grid.GetDataRow(grid.FocusedRowHandle);
+            TxtId.Text = dr["OGRID"].ToString();
+            TxtAd.Text = dr["OGRAD"].ToString();
+            TxtSoyad.Text = dr["OGRSOYAD"].ToString();
+            MskTc.Text = dr["OGRTC"].ToString();
+            MskOgrenciNo.Text = dr["OGRNO"].ToString();
+            if (dr["OGRCINSIYET"].ToString() == "e")
+            {
+                rdbtnerkek.Checked = true;
+            }
+            else
+            {
+                rdbtnkadin.Checked = true;
+            }
+            CmbIL.Text = dr["OGRIL"].ToString();
+            CmbIlce.Text = dr["OGRIlce"].ToString();
+            dogum.Text = dr["OGRDOGUM"].ToString();
+            RchAdres.Text = dr["OGRADRES"].ToString();
+            ogrresim.ImageLocation = dr["OGRFOTO"].ToString();
+        }
+
 
         public static void ResimSec(PictureBox resimkutusu)
         {
@@ -114,8 +139,12 @@ namespace ViewMetodlari
             db().BransListele(CmbBrans);
             ViewMetod.Temizle(TxtId, TxtAd, TxtSoyad, TxtMail, MskTc, MskTel, CmbBrans, CmbIl, CmbIlce, PicBoxResim, RichAdres);
         }
-        public static void Listele(ComboBoxEdit CmbIl, ComboBoxEdit CmbIlce)
+        public static void Listele(GridControl gr1, GridControl gr2, GridControl gr3, GridControl gr4, ComboBoxEdit CmbIl, ComboBoxEdit CmbIlce)
         {
+            gr1.DataSource = db().TabloBilgiGetir("ogrenci", "5.SINIF");
+            gr2.DataSource = db().TabloBilgiGetir("ogrenci", "6.SINIF");
+            gr3.DataSource = db().TabloBilgiGetir("ogrenci", "7.SINIF");
+            gr4.DataSource = db().TabloBilgiGetir("ogrenci", "8.SINIF");
             db().IlIlceList(CmbIl, "il");
             db().IlIlceList(CmbIlce, "ilce");
         }
@@ -156,16 +185,6 @@ namespace ViewMetodlari
         public static void OgretmenKayitSil(TextEdit id)
         {
             db().OgretmenKayitSil(id);
-        }
-
-        public static void OgrenciListele(GridControl gr1,GridControl gr2, GridControl gr3, GridControl gr4)
-        {
-            gr1.DataSource = db().TabloBilgiGetir("ogrenci","5.SINIF");
-            gr2.DataSource = db().TabloBilgiGetir("ogrenci", "6.SINIF");
-            gr3.DataSource = db().TabloBilgiGetir("ogrenci", "7.SINIF");
-            gr4.DataSource = db().TabloBilgiGetir("ogrenci", "8.SINIF");
-            
-
         }
     }
 
