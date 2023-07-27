@@ -32,10 +32,13 @@
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.TxtOgrno = new DevExpress.XtraEditors.TextEdit();
+            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.gridLookUpEdit1 = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.rdbtnkadin = new System.Windows.Forms.RadioButton();
+            this.rdbtnerkek = new System.Windows.Forms.RadioButton();
             this.PicBoxResim = new System.Windows.Forms.PictureBox();
+            this.MskTc = new System.Windows.Forms.MaskedTextBox();
             this.TxtSoyad = new DevExpress.XtraEditors.TextEdit();
             this.TxtAd = new DevExpress.XtraEditors.TextEdit();
             this.TxtId = new DevExpress.XtraEditors.TextEdit();
@@ -49,40 +52,40 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.CmbIlce = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.CmbIL = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.BtnTemizle = new DevExpress.XtraEditors.SimpleButton();
             this.BtnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.BtnSil = new DevExpress.XtraEditors.SimpleButton();
             this.BtnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.BtnResimSec = new DevExpress.XtraEditors.SimpleButton();
+            this.RtbAdres = new System.Windows.Forms.RichTextBox();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabControl2 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.grd5 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
-            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.grd6 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
-            this.gridControl3 = new DevExpress.XtraGrid.GridControl();
+            this.grd7 = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
-            this.gridControl4 = new DevExpress.XtraGrid.GridControl();
+            this.grd8 = new DevExpress.XtraGrid.GridControl();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridLookUpEdit1 = new DevExpress.XtraEditors.GridLookUpEdit();
-            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.MskTc = new System.Windows.Forms.MaskedTextBox();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit2 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.MskOgrenciNo = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtOgrno.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxResim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtSoyad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtAd.Properties)).BeginInit();
@@ -90,26 +93,22 @@
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbIlce.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbIL.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).BeginInit();
             this.xtraTabControl2.SuspendLayout();
             this.xtraTabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grd5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.xtraTabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grd6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.xtraTabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grd7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             this.xtraTabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grd8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -133,11 +132,11 @@
             // 
             // groupControl2
             // 
+            this.groupControl2.Controls.Add(this.MskOgrenciNo);
             this.groupControl2.Controls.Add(this.dateEdit1);
             this.groupControl2.Controls.Add(this.gridLookUpEdit1);
-            this.groupControl2.Controls.Add(this.radioButton2);
-            this.groupControl2.Controls.Add(this.radioButton1);
-            this.groupControl2.Controls.Add(this.TxtOgrno);
+            this.groupControl2.Controls.Add(this.rdbtnkadin);
+            this.groupControl2.Controls.Add(this.rdbtnerkek);
             this.groupControl2.Controls.Add(this.PicBoxResim);
             this.groupControl2.Controls.Add(this.MskTc);
             this.groupControl2.Controls.Add(this.TxtSoyad);
@@ -158,37 +157,56 @@
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "groupControl2";
             // 
-            // radioButton2
+            // dateEdit1
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(155, 364);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(51, 17);
-            this.radioButton2.TabIndex = 31;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Kadın";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.dateEdit1.EditValue = null;
+            this.dateEdit1.Location = new System.Drawing.Point(98, 397);
+            this.dateEdit1.Name = "dateEdit1";
+            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Size = new System.Drawing.Size(152, 20);
+            this.dateEdit1.TabIndex = 32;
             // 
-            // radioButton1
+            // gridLookUpEdit1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(98, 364);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(51, 17);
-            this.radioButton1.TabIndex = 30;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Erkek";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.gridLookUpEdit1.Location = new System.Drawing.Point(98, 434);
+            this.gridLookUpEdit1.Name = "gridLookUpEdit1";
+            this.gridLookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.gridLookUpEdit1.Properties.PopupView = this.gridLookUpEdit1View;
+            this.gridLookUpEdit1.Size = new System.Drawing.Size(152, 20);
+            this.gridLookUpEdit1.TabIndex = 1;
             // 
-            // TxtOgrno
+            // gridLookUpEdit1View
             // 
-            this.TxtOgrno.Enabled = false;
-            this.TxtOgrno.Location = new System.Drawing.Point(98, 324);
-            this.TxtOgrno.Name = "TxtOgrno";
-            this.TxtOgrno.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TxtOgrno.Properties.Appearance.Options.UseFont = true;
-            this.TxtOgrno.Size = new System.Drawing.Size(152, 22);
-            this.TxtOgrno.TabIndex = 29;
+            this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
+            this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // rdbtnkadin
+            // 
+            this.rdbtnkadin.AutoSize = true;
+            this.rdbtnkadin.Location = new System.Drawing.Point(155, 364);
+            this.rdbtnkadin.Name = "rdbtnkadin";
+            this.rdbtnkadin.Size = new System.Drawing.Size(51, 17);
+            this.rdbtnkadin.TabIndex = 31;
+            this.rdbtnkadin.TabStop = true;
+            this.rdbtnkadin.Text = "Kadın";
+            this.rdbtnkadin.UseVisualStyleBackColor = true;
+            // 
+            // rdbtnerkek
+            // 
+            this.rdbtnerkek.AutoSize = true;
+            this.rdbtnerkek.Location = new System.Drawing.Point(98, 364);
+            this.rdbtnerkek.Name = "rdbtnerkek";
+            this.rdbtnerkek.Size = new System.Drawing.Size(51, 17);
+            this.rdbtnerkek.TabIndex = 30;
+            this.rdbtnerkek.TabStop = true;
+            this.rdbtnerkek.Text = "Erkek";
+            this.rdbtnerkek.UseVisualStyleBackColor = true;
             // 
             // PicBoxResim
             // 
@@ -198,6 +216,15 @@
             this.PicBoxResim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBoxResim.TabIndex = 28;
             this.PicBoxResim.TabStop = false;
+            // 
+            // MskTc
+            // 
+            this.MskTc.Location = new System.Drawing.Point(98, 289);
+            this.MskTc.Mask = "00000000000";
+            this.MskTc.Name = "MskTc";
+            this.MskTc.Size = new System.Drawing.Size(152, 21);
+            this.MskTc.TabIndex = 22;
+            this.MskTc.ValidatingType = typeof(int);
             // 
             // TxtSoyad
             // 
@@ -317,8 +344,8 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.comboBoxEdit2);
-            this.groupControl1.Controls.Add(this.comboBoxEdit1);
+            this.groupControl1.Controls.Add(this.CmbIlce);
+            this.groupControl1.Controls.Add(this.CmbIL);
             this.groupControl1.Controls.Add(this.labelControl12);
             this.groupControl1.Controls.Add(this.labelControl11);
             this.groupControl1.Controls.Add(this.BtnTemizle);
@@ -326,7 +353,7 @@
             this.groupControl1.Controls.Add(this.BtnSil);
             this.groupControl1.Controls.Add(this.BtnKaydet);
             this.groupControl1.Controls.Add(this.BtnResimSec);
-            this.groupControl1.Controls.Add(this.richTextBox1);
+            this.groupControl1.Controls.Add(this.RtbAdres);
             this.groupControl1.Controls.Add(this.labelControl9);
             this.groupControl1.Location = new System.Drawing.Point(4, 3);
             this.groupControl1.Name = "groupControl1";
@@ -334,6 +361,44 @@
             this.groupControl1.Size = new System.Drawing.Size(275, 518);
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "groupControl1";
+            // 
+            // CmbIlce
+            // 
+            this.CmbIlce.Location = new System.Drawing.Point(93, 57);
+            this.CmbIlce.Name = "CmbIlce";
+            this.CmbIlce.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CmbIlce.Size = new System.Drawing.Size(152, 20);
+            this.CmbIlce.TabIndex = 30;
+            // 
+            // CmbIL
+            // 
+            this.CmbIL.Location = new System.Drawing.Point(93, 17);
+            this.CmbIL.Name = "CmbIL";
+            this.CmbIL.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CmbIL.Size = new System.Drawing.Size(152, 20);
+            this.CmbIL.TabIndex = 29;
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl12.Appearance.Options.UseFont = true;
+            this.labelControl12.Location = new System.Drawing.Point(52, 59);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(28, 16);
+            this.labelControl12.TabIndex = 28;
+            this.labelControl12.Text = "İlçe:";
+            // 
+            // labelControl11
+            // 
+            this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl11.Appearance.Options.UseFont = true;
+            this.labelControl11.Location = new System.Drawing.Point(67, 21);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(13, 16);
+            this.labelControl11.TabIndex = 27;
+            this.labelControl11.Text = "İl:";
             // 
             // BtnTemizle
             // 
@@ -380,6 +445,24 @@
             this.BtnResimSec.TabIndex = 18;
             this.BtnResimSec.Text = "Resim Seç";
             // 
+            // RtbAdres
+            // 
+            this.RtbAdres.Location = new System.Drawing.Point(93, 97);
+            this.RtbAdres.Name = "RtbAdres";
+            this.RtbAdres.Size = new System.Drawing.Size(154, 96);
+            this.RtbAdres.TabIndex = 17;
+            this.RtbAdres.Text = "";
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl9.Appearance.Options.UseFont = true;
+            this.labelControl9.Location = new System.Drawing.Point(32, 97);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(48, 16);
+            this.labelControl9.TabIndex = 9;
+            this.labelControl9.Text = "ADRES:";
+            // 
             // xtraTabControl2
             // 
             this.xtraTabControl2.Location = new System.Drawing.Point(13, 12);
@@ -395,197 +478,112 @@
             // 
             // xtraTabPage3
             // 
-            this.xtraTabPage3.Controls.Add(this.gridControl1);
+            this.xtraTabPage3.Controls.Add(this.grd5);
             this.xtraTabPage3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage3.ImageOptions.Image")));
             this.xtraTabPage3.Name = "xtraTabPage3";
             this.xtraTabPage3.Size = new System.Drawing.Size(661, 478);
             this.xtraTabPage3.Text = "5. SINIF";
             // 
-            // gridControl1
+            // grd5
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(661, 478);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grd5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grd5.Location = new System.Drawing.Point(0, 0);
+            this.grd5.MainView = this.gridView1;
+            this.grd5.Name = "grd5";
+            this.grd5.Size = new System.Drawing.Size(661, 478);
+            this.grd5.TabIndex = 0;
+            this.grd5.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.grd5;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // xtraTabPage4
             // 
-            this.xtraTabPage4.Controls.Add(this.gridControl2);
+            this.xtraTabPage4.Controls.Add(this.grd6);
             this.xtraTabPage4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage4.ImageOptions.Image")));
             this.xtraTabPage4.Name = "xtraTabPage4";
             this.xtraTabPage4.Size = new System.Drawing.Size(661, 478);
             this.xtraTabPage4.Text = "6. SINIF";
             // 
-            // gridControl2
+            // grd6
             // 
-            this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl2.Location = new System.Drawing.Point(0, 0);
-            this.gridControl2.MainView = this.gridView2;
-            this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(661, 478);
-            this.gridControl2.TabIndex = 1;
-            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grd6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grd6.Location = new System.Drawing.Point(0, 0);
+            this.grd6.MainView = this.gridView2;
+            this.grd6.Name = "grd6";
+            this.grd6.Size = new System.Drawing.Size(661, 478);
+            this.grd6.TabIndex = 1;
+            this.grd6.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
             // gridView2
             // 
-            this.gridView2.GridControl = this.gridControl2;
+            this.gridView2.GridControl = this.grd6;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
             // xtraTabPage5
             // 
-            this.xtraTabPage5.Controls.Add(this.gridControl3);
+            this.xtraTabPage5.Controls.Add(this.grd7);
             this.xtraTabPage5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage5.ImageOptions.Image")));
             this.xtraTabPage5.Name = "xtraTabPage5";
             this.xtraTabPage5.Size = new System.Drawing.Size(661, 478);
             this.xtraTabPage5.Text = "7. SINIF";
             // 
-            // gridControl3
+            // grd7
             // 
-            this.gridControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl3.Location = new System.Drawing.Point(0, 0);
-            this.gridControl3.MainView = this.gridView3;
-            this.gridControl3.Name = "gridControl3";
-            this.gridControl3.Size = new System.Drawing.Size(661, 478);
-            this.gridControl3.TabIndex = 1;
-            this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grd7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grd7.Location = new System.Drawing.Point(0, 0);
+            this.grd7.MainView = this.gridView3;
+            this.grd7.Name = "grd7";
+            this.grd7.Size = new System.Drawing.Size(661, 478);
+            this.grd7.TabIndex = 1;
+            this.grd7.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
             // 
             // gridView3
             // 
-            this.gridView3.GridControl = this.gridControl3;
+            this.gridView3.GridControl = this.grd7;
             this.gridView3.Name = "gridView3";
             this.gridView3.OptionsView.ShowGroupPanel = false;
             // 
             // xtraTabPage6
             // 
-            this.xtraTabPage6.Controls.Add(this.gridControl4);
+            this.xtraTabPage6.Controls.Add(this.grd8);
             this.xtraTabPage6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage6.ImageOptions.Image")));
             this.xtraTabPage6.Name = "xtraTabPage6";
             this.xtraTabPage6.Size = new System.Drawing.Size(661, 478);
             this.xtraTabPage6.Text = "8. SINIF";
             // 
-            // gridControl4
+            // grd8
             // 
-            this.gridControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl4.Location = new System.Drawing.Point(0, 0);
-            this.gridControl4.MainView = this.gridView4;
-            this.gridControl4.Name = "gridControl4";
-            this.gridControl4.Size = new System.Drawing.Size(661, 478);
-            this.gridControl4.TabIndex = 1;
-            this.gridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grd8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grd8.Location = new System.Drawing.Point(0, 0);
+            this.grd8.MainView = this.gridView4;
+            this.grd8.Name = "grd8";
+            this.grd8.Size = new System.Drawing.Size(661, 478);
+            this.grd8.TabIndex = 1;
+            this.grd8.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
             // 
             // gridView4
             // 
-            this.gridView4.GridControl = this.gridControl4;
+            this.gridView4.GridControl = this.grd8;
             this.gridView4.Name = "gridView4";
             this.gridView4.OptionsView.ShowGroupPanel = false;
             // 
-            // gridLookUpEdit1
+            // MskOgrenciNo
             // 
-            this.gridLookUpEdit1.Location = new System.Drawing.Point(98, 434);
-            this.gridLookUpEdit1.Name = "gridLookUpEdit1";
-            this.gridLookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.gridLookUpEdit1.Properties.PopupView = this.gridLookUpEdit1View;
-            this.gridLookUpEdit1.Size = new System.Drawing.Size(152, 20);
-            this.gridLookUpEdit1.TabIndex = 1;
-            // 
-            // gridLookUpEdit1View
-            // 
-            this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
-            this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
-            // 
-            // MskTc
-            // 
-            this.MskTc.Location = new System.Drawing.Point(98, 289);
-            this.MskTc.Mask = "00000000000";
-            this.MskTc.Name = "MskTc";
-            this.MskTc.Size = new System.Drawing.Size(152, 21);
-            this.MskTc.TabIndex = 22;
-            this.MskTc.ValidatingType = typeof(int);
-            // 
-            // dateEdit1
-            // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(98, 397);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(152, 20);
-            this.dateEdit1.TabIndex = 32;
-            // 
-            // labelControl11
-            // 
-            this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl11.Appearance.Options.UseFont = true;
-            this.labelControl11.Location = new System.Drawing.Point(67, 21);
-            this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(13, 16);
-            this.labelControl11.TabIndex = 27;
-            this.labelControl11.Text = "İl:";
-            // 
-            // labelControl12
-            // 
-            this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl12.Appearance.Options.UseFont = true;
-            this.labelControl12.Location = new System.Drawing.Point(52, 59);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(28, 16);
-            this.labelControl12.TabIndex = 28;
-            this.labelControl12.Text = "İlçe:";
-            // 
-            // comboBoxEdit1
-            // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(93, 17);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(152, 20);
-            this.comboBoxEdit1.TabIndex = 29;
-            // 
-            // comboBoxEdit2
-            // 
-            this.comboBoxEdit2.Location = new System.Drawing.Point(93, 57);
-            this.comboBoxEdit2.Name = "comboBoxEdit2";
-            this.comboBoxEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit2.Size = new System.Drawing.Size(152, 20);
-            this.comboBoxEdit2.TabIndex = 30;
-            // 
-            // labelControl9
-            // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(32, 97);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(48, 16);
-            this.labelControl9.TabIndex = 9;
-            this.labelControl9.Text = "ADRES:";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(93, 97);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(154, 96);
-            this.richTextBox1.TabIndex = 17;
-            this.richTextBox1.Text = "";
+            this.MskOgrenciNo.Location = new System.Drawing.Point(98, 325);
+            this.MskOgrenciNo.Mask = "0000";
+            this.MskOgrenciNo.Name = "MskOgrenciNo";
+            this.MskOgrenciNo.Size = new System.Drawing.Size(152, 21);
+            this.MskOgrenciNo.TabIndex = 33;
+            this.MskOgrenciNo.ValidatingType = typeof(int);
             // 
             // Ogrenciler
             // 
@@ -603,7 +601,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtOgrno.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxResim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtSoyad.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtAd.Properties)).EndInit();
@@ -612,26 +613,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbIlce.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbIL.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).EndInit();
             this.xtraTabControl2.ResumeLayout(false);
             this.xtraTabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grd5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.xtraTabPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grd6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.xtraTabPage5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grd7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             this.xtraTabPage6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grd8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -663,29 +660,29 @@
         private DevExpress.XtraTab.XtraTabControl xtraTabControl2;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage3;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl grd5;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.GridControl gridControl2;
+        private DevExpress.XtraGrid.GridControl grd6;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage5;
-        private DevExpress.XtraGrid.GridControl gridControl3;
+        private DevExpress.XtraGrid.GridControl grd7;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage6;
-        private DevExpress.XtraGrid.GridControl gridControl4;
+        private DevExpress.XtraGrid.GridControl grd8;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private DevExpress.XtraEditors.TextEdit TxtOgrno;
+        private System.Windows.Forms.RadioButton rdbtnkadin;
+        private System.Windows.Forms.RadioButton rdbtnerkek;
         private DevExpress.XtraEditors.GridLookUpEdit gridLookUpEdit1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
         private System.Windows.Forms.MaskedTextBox MskTc;
         private DevExpress.XtraEditors.DateEdit dateEdit1;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit2;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.ComboBoxEdit CmbIlce;
+        private DevExpress.XtraEditors.ComboBoxEdit CmbIL;
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private DevExpress.XtraEditors.LabelControl labelControl11;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox RtbAdres;
         private DevExpress.XtraEditors.LabelControl labelControl9;
+        private System.Windows.Forms.MaskedTextBox MskOgrenciNo;
     }
 }
 
