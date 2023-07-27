@@ -32,6 +32,7 @@
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.MskOgrenciNo = new System.Windows.Forms.MaskedTextBox();
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             this.gridLookUpEdit1 = new DevExpress.XtraEditors.GridLookUpEdit();
             this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -76,7 +77,6 @@
             this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
             this.grd8 = new DevExpress.XtraGrid.GridControl();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.MskOgrenciNo = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -156,6 +156,15 @@
             this.groupControl2.Size = new System.Drawing.Size(275, 518);
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "groupControl2";
+            // 
+            // MskOgrenciNo
+            // 
+            this.MskOgrenciNo.Location = new System.Drawing.Point(98, 325);
+            this.MskOgrenciNo.Mask = "0000";
+            this.MskOgrenciNo.Name = "MskOgrenciNo";
+            this.MskOgrenciNo.Size = new System.Drawing.Size(152, 21);
+            this.MskOgrenciNo.TabIndex = 33;
+            this.MskOgrenciNo.ValidatingType = typeof(int);
             // 
             // dateEdit1
             // 
@@ -576,15 +585,6 @@
             this.gridView4.Name = "gridView4";
             this.gridView4.OptionsView.ShowGroupPanel = false;
             // 
-            // MskOgrenciNo
-            // 
-            this.MskOgrenciNo.Location = new System.Drawing.Point(98, 325);
-            this.MskOgrenciNo.Mask = "0000";
-            this.MskOgrenciNo.Name = "MskOgrenciNo";
-            this.MskOgrenciNo.Size = new System.Drawing.Size(152, 21);
-            this.MskOgrenciNo.TabIndex = 33;
-            this.MskOgrenciNo.ValidatingType = typeof(int);
-            // 
             // Ogrenciler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -595,6 +595,7 @@
             this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("Ogrenciler.IconOptions.Image")));
             this.Name = "Ogrenciler";
             this.Text = "Öğrenciler";
+            this.Load += new System.EventHandler(this.Ogrenciler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);

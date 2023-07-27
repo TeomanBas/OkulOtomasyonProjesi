@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using ViewMetodlari;
 
 namespace OgrencilerModul
 {
@@ -18,7 +19,7 @@ namespace OgrencilerModul
 
         private void BtnTemizle_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void BtnGuncelle_Click(object sender, EventArgs e)
@@ -54,6 +55,11 @@ namespace OgrencilerModul
         private void maskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
+        }
+
+        private void Ogrenciler_Load(object sender, EventArgs e)
+        {
+            ViewMetod.OgrenciListele(grd5,grd6,grd7,grd8);
         }
     }
 }
