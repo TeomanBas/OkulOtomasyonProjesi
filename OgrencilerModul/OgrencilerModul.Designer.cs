@@ -536,6 +536,7 @@
             this.gridView2.GridControl = this.grd6;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsView.ShowGroupPanel = false;
+            this.gridView2.FocusedRowObjectChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventHandler(this.gridView2_FocusedRowObjectChanged);
             // 
             // xtraTabPage5
             // 
@@ -561,6 +562,7 @@
             this.gridView3.GridControl = this.grd7;
             this.gridView3.Name = "gridView3";
             this.gridView3.OptionsView.ShowGroupPanel = false;
+            this.gridView3.FocusedRowObjectChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventHandler(this.gridView3_FocusedRowObjectChanged);
             // 
             // xtraTabPage6
             // 
@@ -586,6 +588,7 @@
             this.gridView4.GridControl = this.grd8;
             this.gridView4.Name = "gridView4";
             this.gridView4.OptionsView.ShowGroupPanel = false;
+            this.gridView4.FocusedRowObjectChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventHandler(this.gridView4_FocusedRowObjectChanged);
             // 
             // Ogrenciler
             // 

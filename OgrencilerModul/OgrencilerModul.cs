@@ -69,7 +69,22 @@ namespace OgrencilerModul
 
         private void gridView1_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
         {
+            ViewMetod.GridViewSatir(gridView1 , TxtId,TxtAd,TxtSoyad,MskTc,MskOgrenciNo,rdbtnerkek,rdbtnkadin,dateEdit1,gridLookUpEdit1,CmbIL,CmbIlce,RtbAdres,PicBoxResim);
+        }
 
+        private void gridView2_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
+        {
+            ViewMetod.GridViewSatir(gridView2, TxtId, TxtAd, TxtSoyad, MskTc, MskOgrenciNo, rdbtnerkek, rdbtnkadin, dateEdit1, gridLookUpEdit1, CmbIL, CmbIlce, RtbAdres, PicBoxResim);
+        }
+
+        private void gridView3_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
+        {
+            ViewMetod.GridViewSatir(gridView3, TxtId, TxtAd, TxtSoyad, MskTc, MskOgrenciNo, rdbtnerkek, rdbtnkadin, dateEdit1, gridLookUpEdit1, CmbIL, CmbIlce, RtbAdres, PicBoxResim);
+        }
+
+        private void gridView4_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
+        {
+            ViewMetod.GridViewSatir(gridView4, TxtId, TxtAd, TxtSoyad, MskTc, MskOgrenciNo, rdbtnerkek, rdbtnkadin, dateEdit1, gridLookUpEdit1, CmbIL, CmbIlce, RtbAdres, PicBoxResim);
         }
     }
 }
