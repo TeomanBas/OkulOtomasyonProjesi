@@ -164,6 +164,7 @@ namespace ViewMetodlari
             gr2.DataSource = db().TabloBilgiGetir("ogrenci", "6.SINIF");
             gr3.DataSource = db().TabloBilgiGetir("ogrenci", "7.SINIF");
             gr4.DataSource = db().TabloBilgiGetir("ogrenci", "8.SINIF");
+            
 
         }
     }

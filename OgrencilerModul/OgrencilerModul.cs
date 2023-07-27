@@ -59,14 +59,17 @@ namespace OgrencilerModul
 
         private void Ogrenciler_Load(object sender, EventArgs e)
         {
-            ViewMetod.OgrenciListele(grd5,grd6,grd7,grd8);
-            ViewMetod.Listele(CmbIL, CmbIlce);
-            
+            ViewMetod.Listele(grd5, grd6, grd7, grd8, CmbIL, CmbIlce);
         }
 
         private void CmbIL_SelectedIndexChanged(object sender, EventArgs e)
         {
             ViewMetod.SecimIlceListe(CmbIlce,CmbIL);
+        }
+
+        private void gridView1_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
+        {
+
         }
     }
 }
