@@ -125,5 +125,14 @@ namespace Veritabani
             Baglanti() .Close();
             MessageBox.Show("Personel Silindi", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
+
+        public DataTable OgrenciListele(string sinif)
+        {
+            DataTable dt = new DataTable();
+            string query="SELECT * FROM TBL_OGRENCILER WHERE OGRSINIF='"+sinif+"'";
+            SqlDataAdapter da = new SqlDataAdapter(query, Baglanti());
+            da.Fill(dt);
+            return dt;
+        }
     }
 }

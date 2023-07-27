@@ -11,6 +11,7 @@ using System.IO;
 using DevExpress.XtraGrid;
 using Veritabani;
 using System.Runtime.CompilerServices;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace ViewMetodlari
 {
@@ -150,6 +151,15 @@ namespace ViewMetodlari
         public static void OgretmenKayitSil(TextEdit id)
         {
             db().OgretmenKayitSil(id);
+        }
+
+        public static void OgrenciListele(GridControl gr1,GridControl gr2, GridControl gr3, GridControl gr4)
+        {
+            gr1.DataSource = db().OgrenciListele("5.SINIF");
+            gr2.DataSource = db().OgrenciListele("6.SINIF");
+            gr3.DataSource = db().OgrenciListele("7.SINIF");
+            gr4.DataSource = db().OgrenciListele("8.SINIF");
+
         }
     }
 
