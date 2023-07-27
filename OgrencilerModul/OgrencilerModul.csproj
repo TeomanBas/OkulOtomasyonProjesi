@@ -58,6 +58,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OgrenciKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrenciKarti.Designer.cs">
+      <DependentUpon>OgrenciKarti.cs</DependentUpon>
+    </Compile>
     <Compile Include="OgrencilerModul.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="OgrenciKarti.resx">
+      <DependentUpon>OgrenciKarti.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OgrencilerModul.resx">
       <DependentUpon>OgrencilerModul.cs</DependentUpon>
     </EmbeddedResource>
