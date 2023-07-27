@@ -388,6 +388,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.CmbIL.Size = new System.Drawing.Size(152, 20);
             this.CmbIL.TabIndex = 29;
+            this.CmbIL.SelectedIndexChanged += new System.EventHandler(this.CmbIL_SelectedIndexChanged);
             // 
             // labelControl12
             // 

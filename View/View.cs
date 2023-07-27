@@ -114,6 +114,11 @@ namespace ViewMetodlari
             db().BransListele(CmbBrans);
             ViewMetod.Temizle(TxtId, TxtAd, TxtSoyad, TxtMail, MskTc, MskTel, CmbBrans, CmbIl, CmbIlce, PicBoxResim, RichAdres);
         }
+        public static void Listele(ComboBoxEdit CmbIl, ComboBoxEdit CmbIlce)
+        {
+            db().IlIlceList(CmbIl, "il");
+            db().IlIlceList(CmbIlce, "ilce");
+        }
 
         public static void KayitListeYenile(GridControl grid)
         {
