@@ -108,7 +108,7 @@ namespace ViewMetodlari
             MaskedTextBox MskTc, MaskedTextBox MskTel, ComboBoxEdit CmbBrans, ComboBoxEdit CmbIl, ComboBoxEdit CmbIlce,
             PictureBox PicBoxResim, RichTextBox RichAdres)
         {
-            grid.DataSource = db().OgretmenBilgiGetir();
+            grid.DataSource = db().TabloBilgiGetir("ogretmen");
             db().IlIlceList(CmbIl, "il");
             db().IlIlceList(CmbIlce, "ilce");
             db().BransListele(CmbBrans);
@@ -122,7 +122,7 @@ namespace ViewMetodlari
 
         public static void KayitListeYenile(GridControl grid)
         {
-            grid.DataSource = db().OgretmenBilgiGetir();
+            grid.DataSource = db().TabloBilgiGetir("ogretmen");
         }
 
         public static void SecimIlceListe(ComboBoxEdit CmbIlce, ComboBoxEdit CmbIl)
@@ -160,10 +160,10 @@ namespace ViewMetodlari
 
         public static void OgrenciListele(GridControl gr1,GridControl gr2, GridControl gr3, GridControl gr4)
         {
-            gr1.DataSource = db().OgrenciListele("5.SINIF");
-            gr2.DataSource = db().OgrenciListele("6.SINIF");
-            gr3.DataSource = db().OgrenciListele("7.SINIF");
-            gr4.DataSource = db().OgrenciListele("8.SINIF");
+            gr1.DataSource = db().TabloBilgiGetir("ogrenci","5.SINIF");
+            gr2.DataSource = db().TabloBilgiGetir("ogrenci", "6.SINIF");
+            gr3.DataSource = db().TabloBilgiGetir("ogrenci", "7.SINIF");
+            gr4.DataSource = db().TabloBilgiGetir("ogrenci", "8.SINIF");
 
         }
     }
