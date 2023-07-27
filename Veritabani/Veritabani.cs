@@ -19,11 +19,17 @@ namespace Veritabani
             baglan.Open();
             return baglan;
         }
-        public DataTable OgretmenBilgiGetir()
+        public DataTable TabloBilgiGetir(string tablo)
         {
+            if(tablo == "ogretmen")
+            {
+                tablo = "TBL_OGRETMENLER";
+            }
+            string query="SELECT * FROM "+tablo;
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM TBL_OGRETMENLER", Baglanti());
+            SqlDataAdapter da = new SqlDataAdapter(query, Baglanti());
             da.Fill(dt);
+            Baglanti().Close();
             return dt;
         }
         public void IlIlceList(ComboBoxEdit nesne,string t)
@@ -126,10 +132,14 @@ namespace Veritabani
             MessageBox.Show("Personel Silindi", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
-        public DataTable OgrenciListele(string sinif)
+        public DataTable TabloBilgiGetir(string tablo,string sinif)
         {
+            if (tablo == "ogrenci")
+            {
+                tablo = "TBL_OGRENCILER";
+            }
             DataTable dt = new DataTable();
-            string query="SELECT * FROM TBL_OGRENCILER WHERE OGRSINIF='"+sinif+"'";
+            string query="SELECT * FROM "+tablo+" WHERE OGRSINIF='"+sinif+"'";
             SqlDataAdapter da = new SqlDataAdapter(query, Baglanti());
             Baglanti().Close();
             da.Fill(dt);
