@@ -199,11 +199,7 @@ namespace ViewMetodlari
             {
                 cinsiyet = "k";
             }
-
-            // henüz resim seç etkin olmadığından fonksiyonun hava vermemesi için tanımlandı.
-            resimkutusu.ImageLocation = @"C:\Users\Pc\Desktop\GithubCalismaAlani\OkulOtomasyonProjesi\OgretmenlerModul\Resimler\02db86f5-c568-4cff-92a5-98355571e333.jpg";
             db().KayitEkle(ad, soyad, tc, ogrno, sinif, dogum,cinsiyet, il, ilce, adres, ResimKopyala(resimkutusu.ImageLocation));
-
         }
 
         public static void OgretmenBilgiGuncelle(TextEdit ad, TextEdit soyad, MaskedTextBox tc,

@@ -94,5 +94,10 @@ namespace OgrencilerModul
             ViewMetod.KayitEkle(TxtId, TxtAd, TxtSoyad, MskTc, MskOgrenciNo, CmbSinif, dateEdit1,rdbtnerkek, CmbIL,  CmbIlce, RtbAdres, PicBoxResim);
             ViewMetod.Listele(grd5, grd6, grd7, grd8, CmbIL, CmbIlce);
         }
+
+        private void BtnResimSec_Click_1(object sender, EventArgs e)
+        {
+            ViewMetod.ResimSec(PicBoxResim);
+        }
     }
 }
