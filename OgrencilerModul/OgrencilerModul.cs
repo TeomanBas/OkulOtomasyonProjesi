@@ -99,5 +99,11 @@ namespace OgrencilerModul
         {
             ViewMetod.ResimSec(PicBoxResim);
         }
+
+        private void BtnGuncelle_Click_1(object sender, EventArgs e)
+        {
+            ViewMetod.KayitGuncelle(TxtId, TxtAd, TxtSoyad, MskTc, MskOgrenciNo, CmbSinif, dateEdit1, rdbtnerkek, CmbIL, CmbIlce, RtbAdres, PicBoxResim);
+            ViewMetod.Listele(grd5, grd6, grd7, grd8, CmbIL, CmbIlce);
+        }
     }
 }
