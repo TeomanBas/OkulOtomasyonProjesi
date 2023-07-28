@@ -169,13 +169,27 @@ namespace Veritabani
             MessageBox.Show("Personel Bilgileri Güncellendi", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
-        public void OgretmenKayitSil(TextEdit id)
+        public void KayitSil(TextEdit id,string modul)
         {
-            SqlCommand cmd = new SqlCommand("DELETE FROM TBL_OGRETMENLER WHERE OGRTID=@p1",Baglanti());
+            string tablo = "";
+            
+            if (modul == "ogretmen")
+            {
+                //SqlCommand cmd= new SqlCommand("DELETE FROM TBL_OGRETMENLER WHERE OGRTID=@p1",Baglanti());
+                tablo = "TBL_OGRETMENLER";
+
+            }
+            else
+            {
+                //SqlCommand cmd = new SqlCommand("DELETE FROM TBL_OGRENCILER WHERE OGRTID=@p1", Baglanti());
+                tablo = "TBL_OGRENCILER";
+
+            }
+            SqlCommand cmd = new SqlCommand("DELETE FROM "+tablo+" WHERE OGRID=@p1",Baglanti());
             cmd.Parameters.AddWithValue("@p1",id.Text);
             cmd.ExecuteNonQuery();
             Baglanti() .Close();
-            MessageBox.Show("Personel Silindi", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show("Öğrenci Silindi", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         public DataTable TabloBilgiGetir(string tablo,string sinif)
