@@ -32,6 +32,8 @@
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.CmbSinif = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.MskOgrenciNo = new System.Windows.Forms.MaskedTextBox();
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             this.gridLookUpEdit1 = new DevExpress.XtraEditors.GridLookUpEdit();
@@ -77,13 +79,12 @@
             this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
             this.grd8 = new DevExpress.XtraGrid.GridControl();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.CmbSinif = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbSinif.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1.Properties)).BeginInit();
@@ -111,7 +112,6 @@
             this.xtraTabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grd8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CmbSinif.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -161,6 +161,30 @@
             this.groupControl2.Size = new System.Drawing.Size(275, 518);
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "groupControl2";
+            // 
+            // CmbSinif
+            // 
+            this.CmbSinif.Location = new System.Drawing.Point(98, 355);
+            this.CmbSinif.Name = "CmbSinif";
+            this.CmbSinif.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CmbSinif.Properties.Items.AddRange(new object[] {
+            "5.SINIF",
+            "6.SINIF",
+            "7.SINIF",
+            "8.SINIF"});
+            this.CmbSinif.Size = new System.Drawing.Size(152, 20);
+            this.CmbSinif.TabIndex = 35;
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl10.Appearance.Options.UseFont = true;
+            this.labelControl10.Location = new System.Drawing.Point(52, 356);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(32, 16);
+            this.labelControl10.TabIndex = 34;
+            this.labelControl10.Text = "Sınıf:";
             // 
             // MskOgrenciNo
             // 
@@ -460,6 +484,7 @@
             this.BtnResimSec.Size = new System.Drawing.Size(154, 38);
             this.BtnResimSec.TabIndex = 18;
             this.BtnResimSec.Text = "Resim Seç";
+            this.BtnResimSec.Click += new System.EventHandler(this.BtnResimSec_Click_1);
             // 
             // RtbAdres
             // 
@@ -596,30 +621,6 @@
             this.gridView4.OptionsView.ShowGroupPanel = false;
             this.gridView4.FocusedRowObjectChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventHandler(this.gridView4_FocusedRowObjectChanged);
             // 
-            // CmbSinif
-            // 
-            this.CmbSinif.Location = new System.Drawing.Point(98, 355);
-            this.CmbSinif.Name = "CmbSinif";
-            this.CmbSinif.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.CmbSinif.Properties.Items.AddRange(new object[] {
-            "5.SINIF",
-            "6.SINIF",
-            "7.SINIF",
-            "8.SINIF"});
-            this.CmbSinif.Size = new System.Drawing.Size(152, 20);
-            this.CmbSinif.TabIndex = 35;
-            // 
-            // labelControl10
-            // 
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Location = new System.Drawing.Point(52, 356);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(32, 16);
-            this.labelControl10.TabIndex = 34;
-            this.labelControl10.Text = "Sınıf:";
-            // 
             // Ogrenciler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -637,6 +638,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbSinif.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1.Properties)).EndInit();
@@ -665,7 +667,6 @@
             this.xtraTabPage6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grd8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CmbSinif.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
