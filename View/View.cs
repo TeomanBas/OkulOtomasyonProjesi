@@ -129,6 +129,24 @@ namespace ViewMetodlari
             PicBoxResim.ImageLocation="";
             RichAdres.Clear();
         }
+        public static void Temizle(TextEdit id, TextEdit ad, TextEdit soyad, MaskedTextBox tc,
+    MaskedTextBox ogrno, ComboBoxEdit sinif, DateEdit dogum, RadioButton rdbcinsiyet1, RadioButton rdbcinsiyet2,
+    ComboBoxEdit il, ComboBoxEdit ilce, RichTextBox adres, PictureBox resimkutusu)
+        {
+            id.Clear();
+            ad.Clear();
+            soyad.Clear();
+            tc.Clear();
+            ogrno.Clear();
+            sinif.Clear();
+            dogum.Clear();
+            rdbcinsiyet1.Checked=false;
+            rdbcinsiyet2.Checked = false;
+            il.Clear();
+            ilce.Clear();
+            resimkutusu.ImageLocation = "";
+            adres.Clear();
+        }
 
         public static void Listele(GridControl grid,TextEdit TxtId, TextEdit TxtAd, TextEdit TxtSoyad, TextEdit TxtMail,
             MaskedTextBox MskTc, MaskedTextBox MskTel, ComboBoxEdit CmbBrans, ComboBoxEdit CmbIl, ComboBoxEdit CmbIlce,
