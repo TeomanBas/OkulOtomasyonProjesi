@@ -77,6 +77,8 @@
             this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
             this.grd8 = new DevExpress.XtraGrid.GridControl();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.CmbSinif = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -109,6 +111,7 @@
             this.xtraTabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grd8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbSinif.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -132,6 +135,8 @@
             // 
             // groupControl2
             // 
+            this.groupControl2.Controls.Add(this.CmbSinif);
+            this.groupControl2.Controls.Add(this.labelControl10);
             this.groupControl2.Controls.Add(this.MskOgrenciNo);
             this.groupControl2.Controls.Add(this.dateEdit1);
             this.groupControl2.Controls.Add(this.gridLookUpEdit1);
@@ -169,7 +174,7 @@
             // dateEdit1
             // 
             this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(98, 397);
+            this.dateEdit1.Location = new System.Drawing.Point(98, 423);
             this.dateEdit1.Name = "dateEdit1";
             this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -180,7 +185,7 @@
             // 
             // gridLookUpEdit1
             // 
-            this.gridLookUpEdit1.Location = new System.Drawing.Point(98, 434);
+            this.gridLookUpEdit1.Location = new System.Drawing.Point(98, 454);
             this.gridLookUpEdit1.Name = "gridLookUpEdit1";
             this.gridLookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -198,7 +203,7 @@
             // rdbtnkadin
             // 
             this.rdbtnkadin.AutoSize = true;
-            this.rdbtnkadin.Location = new System.Drawing.Point(155, 364);
+            this.rdbtnkadin.Location = new System.Drawing.Point(157, 388);
             this.rdbtnkadin.Name = "rdbtnkadin";
             this.rdbtnkadin.Size = new System.Drawing.Size(51, 17);
             this.rdbtnkadin.TabIndex = 31;
@@ -209,7 +214,7 @@
             // rdbtnerkek
             // 
             this.rdbtnerkek.AutoSize = true;
-            this.rdbtnerkek.Location = new System.Drawing.Point(98, 364);
+            this.rdbtnerkek.Location = new System.Drawing.Point(100, 388);
             this.rdbtnerkek.Name = "rdbtnerkek";
             this.rdbtnerkek.Size = new System.Drawing.Size(51, 17);
             this.rdbtnerkek.TabIndex = 30;
@@ -267,7 +272,7 @@
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(56, 438);
+            this.labelControl8.Location = new System.Drawing.Point(58, 458);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(28, 16);
             this.labelControl8.TabIndex = 15;
@@ -277,7 +282,7 @@
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(11, 402);
+            this.labelControl7.Location = new System.Drawing.Point(13, 424);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(73, 16);
             this.labelControl7.TabIndex = 14;
@@ -287,7 +292,7 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(28, 366);
+            this.labelControl6.Location = new System.Drawing.Point(30, 390);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(56, 16);
             this.labelControl6.TabIndex = 13;
@@ -297,7 +302,7 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(10, 330);
+            this.labelControl5.Location = new System.Drawing.Point(10, 322);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(74, 16);
             this.labelControl5.TabIndex = 12;
@@ -307,7 +312,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(60, 294);
+            this.labelControl4.Location = new System.Drawing.Point(60, 288);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(24, 16);
             this.labelControl4.TabIndex = 11;
@@ -317,7 +322,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(39, 258);
+            this.labelControl3.Location = new System.Drawing.Point(39, 254);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(45, 16);
             this.labelControl3.TabIndex = 10;
@@ -327,7 +332,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(61, 222);
+            this.labelControl2.Location = new System.Drawing.Point(61, 220);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(23, 16);
             this.labelControl2.TabIndex = 9;
@@ -445,6 +450,7 @@
             this.BtnKaydet.Size = new System.Drawing.Size(154, 38);
             this.BtnKaydet.TabIndex = 19;
             this.BtnKaydet.Text = "Kaydet";
+            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click_1);
             // 
             // BtnResimSec
             // 
@@ -590,6 +596,30 @@
             this.gridView4.OptionsView.ShowGroupPanel = false;
             this.gridView4.FocusedRowObjectChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventHandler(this.gridView4_FocusedRowObjectChanged);
             // 
+            // CmbSinif
+            // 
+            this.CmbSinif.Location = new System.Drawing.Point(98, 355);
+            this.CmbSinif.Name = "CmbSinif";
+            this.CmbSinif.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CmbSinif.Properties.Items.AddRange(new object[] {
+            "5.SINIF",
+            "6.SINIF",
+            "7.SINIF",
+            "8.SINIF"});
+            this.CmbSinif.Size = new System.Drawing.Size(152, 20);
+            this.CmbSinif.TabIndex = 35;
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl10.Appearance.Options.UseFont = true;
+            this.labelControl10.Location = new System.Drawing.Point(52, 356);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(32, 16);
+            this.labelControl10.TabIndex = 34;
+            this.labelControl10.Text = "Sınıf:";
+            // 
             // Ogrenciler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -635,6 +665,7 @@
             this.xtraTabPage6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grd8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbSinif.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -689,6 +720,8 @@
         private System.Windows.Forms.RichTextBox RtbAdres;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private System.Windows.Forms.MaskedTextBox MskOgrenciNo;
+        private DevExpress.XtraEditors.ComboBoxEdit CmbSinif;
+        private DevExpress.XtraEditors.LabelControl labelControl10;
     }
 }
 

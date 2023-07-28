@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
+using DevExpress.XtraGrid;
 using ViewMetodlari;
 
 namespace OgrencilerModul
@@ -85,6 +87,12 @@ namespace OgrencilerModul
         private void gridView4_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
         {
             ViewMetod.GridViewSatir(gridView4, TxtId, TxtAd, TxtSoyad, MskTc, MskOgrenciNo, rdbtnerkek, rdbtnkadin, dateEdit1, gridLookUpEdit1, CmbIL, CmbIlce, RtbAdres, PicBoxResim);
+        }
+
+        private void BtnKaydet_Click_1(object sender, EventArgs e)
+        {
+            ViewMetod.KayitEkle(TxtId, TxtAd, TxtSoyad, MskTc, MskOgrenciNo, CmbSinif, dateEdit1,rdbtnerkek, CmbIL,  CmbIlce, RtbAdres, PicBoxResim);
+            ViewMetod.Listele(grd5, grd6, grd7, grd8, CmbIL, CmbIlce);
         }
     }
 }
