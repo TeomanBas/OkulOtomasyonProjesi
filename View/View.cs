@@ -41,7 +41,7 @@ namespace ViewMetodlari
 
         }
         public static void GridViewSatir(GridView grid, TextEdit TxtId, TextEdit TxtAd, TextEdit TxtSoyad, MaskedTextBox MskTc,MaskedTextBox MskOgrenciNo, 
-            RadioButton rdbtnerkek, RadioButton rdbtnkadin,DateEdit dogum, GridLookUpEdit veli,
+            RadioButton rdbtnerkek, RadioButton rdbtnkadin,DateEdit dogum, GridLookUpEdit veli,ComboBoxEdit sinif,
             ComboBoxEdit CmbIL, ComboBoxEdit CmbIlce,RichTextBox RchAdres,PictureBox ogrresim)
         {
             DataRow dr = grid.GetDataRow(grid.FocusedRowHandle);
@@ -58,6 +58,7 @@ namespace ViewMetodlari
             {
                 rdbtnkadin.Checked = true;
             }
+            sinif.Text = dr["OGRSINIF"].ToString();
             CmbIL.Text = dr["OGRIL"].ToString();
             CmbIlce.Text = dr["OGRIlce"].ToString();
             dogum.Text = dr["OGRDOGUM"].ToString();
