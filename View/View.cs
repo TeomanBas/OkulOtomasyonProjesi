@@ -247,6 +247,41 @@ namespace ViewMetodlari
             db().KayitSil(id,modul);
         }
 
+        public static string[] OgrenciKartBilgileri(GridView gv)
+        {
+            DataRow dr = gv.GetDataRow(gv.FocusedRowHandle);
+            string[] ogrkart=new string[7];
+            if (dr != null)
+            {
+                ogrkart[0]= dr["OGRTC"].ToString();
+                ogrkart[1] = dr["OGRNO"].ToString();
+                ogrkart[2] = dr["OGRAD"].ToString();
+                ogrkart[3] = dr["OGRSOYAD"].ToString();
+                ogrkart[4] = dr["OGRDOGUM"].ToString();
+                ogrkart[5] = dr["OGRCINSIYET"].ToString();
+                ogrkart[6] = dr["OGRFOTO"].ToString();
+                return ogrkart;
+            }
+            return new string[0];
+
+        }
+        public static void OgrenciKartOlustur(Label tc, Label ogrno,Label adsoyad,Label dogum, Label cinsiyet,PictureBox foto)
+        {
+            
+        }
+
+        public static void KartGoster(Form ogrkart)
+        {
+            if (Application.OpenForms["OgrenciKarti"] == null)
+            {
+                ogrkart.Show();
+            }
+            else
+            {
+                Application.OpenForms["OgrenciKarti"].Activate();
+            }
+        }
+        
     }
 
 }
