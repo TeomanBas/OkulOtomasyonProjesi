@@ -224,10 +224,11 @@ namespace ViewMetodlari
             }
             db().KayitGuncelle(id, ad, soyad, tc, ogrno, sinif, dogum, cinsiyet, il, ilce, adres, ResimKopyala(resimkutusu.ImageLocation));
         }
-        public static void OgretmenKayitSil(TextEdit id)
+        public static void KayitSil(TextEdit id,string modul)
         {
-            db().OgretmenKayitSil(id);
+            db().KayitSil(id,modul);
         }
+
     }
 
 }

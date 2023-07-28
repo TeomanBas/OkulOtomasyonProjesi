@@ -79,7 +79,7 @@ namespace OgretmenlerModul
 
         private void BtnSil_Click(object sender, EventArgs e)
         {
-            ViewMetod.OgretmenKayitSil(TxtId);
+            ViewMetod.KayitSil(TxtId,"ogretmen");
             ViewMetod.KayitListeYenile(gridControl1);
         }
 
