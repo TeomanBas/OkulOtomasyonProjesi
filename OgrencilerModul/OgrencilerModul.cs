@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Views.Grid;
 using ViewMetodlari;
 
 namespace OgrencilerModul
@@ -115,6 +116,40 @@ namespace OgrencilerModul
         private void BtnTemizle_Click_1(object sender, EventArgs e)
         {
             ViewMetod.Temizle(TxtId, TxtAd, TxtSoyad, MskTc, MskOgrenciNo, CmbSinif, dateEdit1, rdbtnerkek,rdbtnkadin, CmbIL, CmbIlce, RtbAdres, PicBoxResim);
+        }
+
+        private void gridView1_DoubleClick(object sender, EventArgs e)
+        {
+            OgrenciKarti(gridView1);
+        }
+        private void gridView2_DoubleClick(object sender, EventArgs e)
+        {
+            OgrenciKarti(gridView2);
+        }
+
+        private void gridView3_DoubleClick(object sender, EventArgs e)
+        {
+            OgrenciKarti(gridView3);
+        }
+
+        private void gridView4_DoubleClick(object sender, EventArgs e)
+        {
+            OgrenciKarti(gridView4);
+
+        }
+
+        public void OgrenciKarti(GridView gr)
+        {
+            // ViewMetod.OgrenciKartBilgileri(gridView2);
+            OgrenciKarti ogrkart = new OgrenciKarti();
+            string[] satir = ViewMetod.OgrenciKartBilgileri(gr);
+            ogrkart.tc = satir[0];
+            ogrkart.ogrno = satir[1];
+            ogrkart.adsoyad = satir[2] + " " + satir[3];
+            ogrkart.dogum = satir[4];
+            ogrkart.cinsiyet = satir[5] == "e" ? "erkek" : "kadın";
+            ogrkart.foto = satir[6];
+            ViewMetod.KartGoster(ogrkart);
         }
     }
 }
