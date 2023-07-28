@@ -159,7 +159,7 @@ namespace ViewMetodlari
             db().SecimIlceListe(CmbIlce, CmbIl);
         }
 
-        public static void OgretmenBilgiKaydet(TextEdit id,TextEdit ad, TextEdit soyad, MaskedTextBox tc,
+        public static void KayitEkle(TextEdit id,TextEdit ad, TextEdit soyad, MaskedTextBox tc,
             MaskedTextBox tel, TextEdit mail, ComboBoxEdit il,
             ComboBoxEdit ilce, RichTextBox adres, ComboBoxEdit brans, PictureBox resimkutusu)
         {
@@ -170,9 +170,40 @@ namespace ViewMetodlari
             }
             else
             {
-                db().OgretmenBilgiKaydet(ad, soyad, tc, tel, mail, il, ilce, adres, brans, ResimKopyala(resimkutusu.ImageLocation));
+                db().KayitEkle(ad, soyad, tc, tel, mail, il, ilce, adres, brans, ResimKopyala(resimkutusu.ImageLocation));
 
             }
+        }
+
+        public static void KayitEkle(TextEdit id, TextEdit ad, TextEdit soyad, MaskedTextBox tc,
+    MaskedTextBox ogrno, ComboBoxEdit sinif , DateEdit dogum, RadioButton rdbinsiyet , ComboBoxEdit il, ComboBoxEdit ilce, RichTextBox adres, PictureBox resimkutusu)
+        {
+            /*
+            if (id.Text != "")
+            {
+                MessageBox.Show("Personel eklemek için önce personel bilgilerini temizleyin",
+                    "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                db().KayitEkle(ad, soyad, tc, tel, mail, il, ilce, adres, brans, ResimKopyala(resimkutusu.ImageLocation));
+
+            }
+            */
+            string cinsiyet;
+            if (rdbinsiyet.Checked == true)
+            {
+                cinsiyet = "e";
+            }
+            else
+            {
+                cinsiyet = "k";
+            }
+
+            // henüz resim seç etkin olmadığından fonksiyonun hava vermemesi için tanımlandı.
+            resimkutusu.ImageLocation = @"C:\Users\Pc\Desktop\GithubCalismaAlani\OkulOtomasyonProjesi\OgretmenlerModul\Resimler\02db86f5-c568-4cff-92a5-98355571e333.jpg";
+            db().KayitEkle(ad, soyad, tc, ogrno, sinif, dogum,cinsiyet, il, ilce, adres, ResimKopyala(resimkutusu.ImageLocation));
+
         }
 
         public static void OgretmenBilgiGuncelle(TextEdit ad, TextEdit soyad, MaskedTextBox tc,

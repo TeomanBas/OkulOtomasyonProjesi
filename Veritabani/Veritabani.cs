@@ -67,7 +67,7 @@ namespace Veritabani
             }
             Baglanti().Close();
         }
-        public void OgretmenBilgiKaydet(TextEdit ad, TextEdit soyad,MaskedTextBox tc,
+        public void KayitEkle(TextEdit ad, TextEdit soyad,MaskedTextBox tc,
             MaskedTextBox tel,TextEdit mail,ComboBoxEdit il,
             ComboBoxEdit ilce,RichTextBox adres,ComboBoxEdit brans,string hedefresimkaynak)
         {
@@ -88,6 +88,28 @@ namespace Veritabani
             Baglanti().Close();
             MessageBox.Show("Personel Eklendi", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+        }
+        public void KayitEkle(TextEdit ad, TextEdit soyad, MaskedTextBox tc,
+            MaskedTextBox ogrno, ComboBoxEdit sinif, DateEdit dogum,string cinsiyet, ComboBoxEdit il,
+            ComboBoxEdit ilce, RichTextBox adres, string hedefresimkaynak)
+        {
+            SqlCommand cmd = new SqlCommand("INSERT INTO TBL_OGRENCILER" +
+                " (OGRNO,OGRAD,OGRSOYAD,OGRTC,OGRDOGUM,OGRCINSIYET,OGRIL,OGRILCE,OGRADRES,OGRSINIF,OGRFOTO)" +
+                " VALUES (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11)", Baglanti());
+            cmd.Parameters.AddWithValue("@p1", ogrno.Text);
+            cmd.Parameters.AddWithValue("@p2", ad.Text);
+            cmd.Parameters.AddWithValue("@p3", soyad.Text);
+            cmd.Parameters.AddWithValue("@p4", tc.Text);
+            cmd.Parameters.AddWithValue("@p5", dogum.Text);
+            cmd.Parameters.AddWithValue("@p6", cinsiyet);
+            cmd.Parameters.AddWithValue("@p7", il.Text);
+            cmd.Parameters.AddWithValue("@p8", ilce.Text);
+            cmd.Parameters.AddWithValue("@p9", adres.Text);
+            cmd.Parameters.AddWithValue("@p10", sinif.Text);
+            cmd.Parameters.AddWithValue("@p11", hedefresimkaynak);
+            cmd.ExecuteNonQuery();
+            Baglanti().Close();
+            MessageBox.Show("Öğrenci Eklendi", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         public void BransListele(ComboBoxEdit branslar)
         {
