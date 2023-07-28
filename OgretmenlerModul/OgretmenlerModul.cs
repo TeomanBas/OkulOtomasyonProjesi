@@ -73,7 +73,7 @@ namespace OgretmenlerModul
 
         private void BtnGuncelle_Click(object sender, EventArgs e)
         {
-            ViewMetod.OgretmenBilgiGuncelle(TxtAd, TxtSoyad, MskTc, MskTel, TxtMail, CmbIl, CmbIlce, RichAdres, CmbBrans, PicBoxResim,TxtId);
+            ViewMetod.KayitGuncelle(TxtAd, TxtSoyad, MskTc, MskTel, TxtMail, CmbIl, CmbIlce, RichAdres, CmbBrans, PicBoxResim,TxtId);
             ViewMetod.KayitListeYenile(gridControl1);
         }
 

@@ -111,6 +111,30 @@ namespace Veritabani
             Baglanti().Close();
             MessageBox.Show("Öğrenci Eklendi", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        public void KayitGuncelle(TextEdit id,TextEdit ad, TextEdit soyad, MaskedTextBox tc,
+            MaskedTextBox ogrno, ComboBoxEdit sinif, DateEdit dogum, string cinsiyet, ComboBoxEdit il,
+            ComboBoxEdit ilce, RichTextBox adres, string hedefresimkaynak)
+        {
+            SqlCommand cmd = new SqlCommand("UPDATE TBL_OGRENCILER SET" +
+                " OGRNO=@p1,OGRAD=@p2,OGRSOYAD=@p3,OGRTC=@p4,OGRDOGUM=@p5,OGRCINSIYET=@p6,OGRIL=@p7,OGRILCE=@p8,OGRADRES=@p9,OGRSINIF=@p10,OGRFOTO=@p11 WHERE OGRID=@p12", Baglanti());
+            cmd.Parameters.AddWithValue("@p1", ogrno.Text);
+            cmd.Parameters.AddWithValue("@p2", ad.Text);
+            cmd.Parameters.AddWithValue("@p3", soyad.Text);
+            cmd.Parameters.AddWithValue("@p4", tc.Text);
+            cmd.Parameters.AddWithValue("@p5", dogum.Text);
+            cmd.Parameters.AddWithValue("@p6", cinsiyet);
+            cmd.Parameters.AddWithValue("@p7", il.Text);
+            cmd.Parameters.AddWithValue("@p8", ilce.Text);
+            cmd.Parameters.AddWithValue("@p9", adres.Text);
+            cmd.Parameters.AddWithValue("@p10", sinif.Text);
+            cmd.Parameters.AddWithValue("@p11", hedefresimkaynak);
+            cmd.Parameters.AddWithValue("@p12", id.Text);
+
+            cmd.ExecuteNonQuery();
+            Baglanti().Close();
+            MessageBox.Show("Öğrenci Bilgileri Güncellendi", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
         public void BransListele(ComboBoxEdit branslar)
         {
             SqlCommand cmd = new SqlCommand("SELECT * FROM TBL_BRANSLAR", Baglanti());
@@ -121,7 +145,7 @@ namespace Veritabani
             }
             Baglanti().Close();
         }
-        public void OgretmenBilgiGuncelle(TextEdit ad, TextEdit soyad, MaskedTextBox tc,
+        public void KayitGuncelle(TextEdit ad, TextEdit soyad, MaskedTextBox tc,
            MaskedTextBox tel, TextEdit mail, ComboBoxEdit il, ComboBoxEdit ilce, RichTextBox adres, 
            ComboBoxEdit brans, string resimkutusu, TextEdit id)
         {

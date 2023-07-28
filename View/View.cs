@@ -177,7 +177,7 @@ namespace ViewMetodlari
         }
 
         public static void KayitEkle(TextEdit id, TextEdit ad, TextEdit soyad, MaskedTextBox tc,
-    MaskedTextBox ogrno, ComboBoxEdit sinif , DateEdit dogum, RadioButton rdbinsiyet , ComboBoxEdit il, ComboBoxEdit ilce, RichTextBox adres, PictureBox resimkutusu)
+    MaskedTextBox ogrno, ComboBoxEdit sinif , DateEdit dogum, RadioButton rdbcinsiyet , ComboBoxEdit il, ComboBoxEdit ilce, RichTextBox adres, PictureBox resimkutusu)
         {
             /*
             if (id.Text != "")
@@ -192,7 +192,7 @@ namespace ViewMetodlari
             }
             */
             string cinsiyet;
-            if (rdbinsiyet.Checked == true)
+            if (rdbcinsiyet.Checked == true)
             {
                 cinsiyet = "e";
             }
@@ -203,13 +203,27 @@ namespace ViewMetodlari
             db().KayitEkle(ad, soyad, tc, ogrno, sinif, dogum,cinsiyet, il, ilce, adres, ResimKopyala(resimkutusu.ImageLocation));
         }
 
-        public static void OgretmenBilgiGuncelle(TextEdit ad, TextEdit soyad, MaskedTextBox tc,
+        public static void KayitGuncelle(TextEdit ad, TextEdit soyad, MaskedTextBox tc,
           MaskedTextBox tel, TextEdit mail, ComboBoxEdit il, ComboBoxEdit ilce, RichTextBox adres,
           ComboBoxEdit brans, PictureBox resimkutusu, TextEdit id)
         {
-            db().OgretmenBilgiGuncelle(ad, soyad, tc, tel, mail, il, ilce, adres, brans, ResimKopyala(resimkutusu.ImageLocation), id);
+            db().KayitGuncelle(ad, soyad, tc, tel, mail, il, ilce, adres, brans, ResimKopyala(resimkutusu.ImageLocation), id);
         }
-
+        public static void KayitGuncelle(TextEdit id, TextEdit ad, TextEdit soyad, MaskedTextBox tc,
+   MaskedTextBox ogrno, ComboBoxEdit sinif, DateEdit dogum, RadioButton rdbcinsiyet, ComboBoxEdit il,
+   ComboBoxEdit ilce, RichTextBox adres, PictureBox resimkutusu)
+        {
+            string cinsiyet;
+            if (rdbcinsiyet.Checked == true)
+            {
+                cinsiyet = "e";
+            }
+            else
+            {
+                cinsiyet = "k";
+            }
+            db().KayitGuncelle(id, ad, soyad, tc, ogrno, sinif, dogum, cinsiyet, il, ilce, adres, ResimKopyala(resimkutusu.ImageLocation));
+        }
         public static void OgretmenKayitSil(TextEdit id)
         {
             db().OgretmenKayitSil(id);
