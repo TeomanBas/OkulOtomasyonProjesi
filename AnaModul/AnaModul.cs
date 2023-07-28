@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.Utils.Extensions;
 using OgretmenlerModul;
+using OgrencilerModul;
 
 namespace AnaModul
 {
@@ -44,6 +45,20 @@ namespace AnaModul
             else 
             {
                 Application.OpenForms["Ogretmenler"].Activate();
+            }
+        }
+
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Ogrenciler ogrenciler = new Ogrenciler();
+            if (Application.OpenForms["Ogrenciler"] == null)
+            {
+                ogrenciler.MdiParent = this;
+                ogrenciler.Show();
+            }
+            else
+            {
+                Application.OpenForms["Ogrenciler"].Activate();
             }
         }
     }
