@@ -36,3 +36,8 @@ Update butonu için Veritabanı fonksiyonu yazıldı ve update butonuna entegre 
 
 ### Temizle Butonu
 Temizle butonu için view sınıfına metod yazıldı, ve öğretmenler penceresine entegre edildi ardından öğretmenler penceresindeki id kısmına müdahale edilememesi için Enable özelliği false olarak değiştirildi.
+
+## Öğrenciler Penceresi
+![ogrenciler-modul](./img/ogrenciler-modul.PNG)
+Öğrenciler penceresi içerisinde sınıflara göre tabxcontrol ler yer alıyor ver her tabxkontrol içerisinde o sınıfa ait verileri içeren gridview yapıları yer alıyor.sağ tarafta öğretmenler penceresine benzer bir veri giriş paneli var. datasource üzerindeki satırlara her çift tıklamada o satırdaki öğrenci bilgilerini alıp öğrenci kartı için oluşturulan form içerisine veriler taşınıyor yeni bir öğrenci kart pencereinde veriler ve öğrenci kart görüntüsü gösteriliyor.
+![ogrenci-kart](./img/ogrenci-karti.png)
