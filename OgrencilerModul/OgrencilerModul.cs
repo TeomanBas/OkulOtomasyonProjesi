@@ -18,6 +18,7 @@ namespace OgrencilerModul
         public Ogrenciler()
         {
             InitializeComponent();
+            this.MdiParent = Application.OpenForms["AnaModul"];
         }
 
         private void BtnTemizle_Click(object sender, EventArgs e)

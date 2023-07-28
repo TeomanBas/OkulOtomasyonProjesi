@@ -107,6 +107,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\OgrencilerModul\OgrencilerModul.csproj">
+      <Project>{140c235f-89c3-4771-ab73-b952a7a27da4}</Project>
+      <Name>OgrencilerModul</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OgretmenlerModul\OgretmenlerModul.csproj">
       <Project>{3A10FACF-F070-4710-9310-59841A2BB843}</Project>
       <Name>OgretmenlerModul</Name>
