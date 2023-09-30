@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="OkulOtomasyonModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'OkulOtomasyon.dbo.TBL_BRANSLAR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="TBL_BRANSLAR">
+          <Key>
+            <PropertyRef Name="BRANSID" />
+          </Key>
+          <Property Name="BRANSID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BRANSAD" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TBL_IL">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sehir" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="TBL_ILCE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="ilce" Type="nvarchar" MaxLength="255" />
+          <Property Name="sehir" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TBL_OGRENCILER">
+          <Key>
+            <PropertyRef Name="OGRID" />
+          </Key>
+          <Property Name="OGRID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OGRNO" Type="char" MaxLength="4" />
+          <Property Name="OGRVELIID" Type="int" />
+          <Property Name="OGRAD" Type="varchar" MaxLength="30" />
+          <Property Name="OGRSOYAD" Type="varchar" MaxLength="50" />
+          <Property Name="OGRDOGUM" Type="date" />
+          <Property Name="OGRCINSIYET" Type="char" MaxLength="1" />
+          <Property Name="OGRTC" Type="char" MaxLength="11" />
+          <Property Name="OGRIL" Type="varchar" MaxLength="13" />
+          <Property Name="OGRILCE" Type="varchar" MaxLength="20" />
+          <Property Name="OGRADRES" Type="varchar" MaxLength="50" />
+          <Property Name="OGRSINIF" Type="varchar" MaxLength="7" />
+          <Property Name="OGRFOTO" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="TBL_OGRETMENLER">
+          <Key>
+            <PropertyRef Name="OGRTID" />
+          </Key>
+          <Property Name="OGRTID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OGRTAD" Type="varchar" MaxLength="30" />
+          <Property Name="OGRTSOYAD" Type="varchar" MaxLength="30" />
+          <Property Name="OGRTTC" Type="char" MaxLength="11" />
+          <Property Name="OGRTTEL" Type="char" MaxLength="15" />
+          <Property Name="OGRTMAIL" Type="varchar" MaxLength="40" />
+          <Property Name="OGRTIL" Type="varchar" MaxLength="20" />
+          <Property Name="OGRTILCE" Type="varchar" MaxLength="20" />
+          <Property Name="OGRTADRES" Type="varchar" MaxLength="100" />
+          <Property Name="OGRTBRANS" Type="varchar" MaxLength="50" />
+          <Property Name="OGRTFOTO" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="TBL_VELILER">
+          <Key>
+            <PropertyRef Name="VELIID" />
+          </Key>
+          <Property Name="VELIID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VELIANNE" Type="varchar" MaxLength="50" />
+          <Property Name="VELIBABA" Type="varbinary" MaxLength="50" />
+          <Property Name="VELITEL1" Type="char" MaxLength="15" />
+          <Property Name="VELITEL2" Type="char" MaxLength="15" />
+          <Property Name="VELIMAIL" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_TBL_ILCE_TBL_IL1">
+          <End Role="TBL_IL" Type="Self.TBL_IL" Multiplicity="1" />
+          <End Role="TBL_ILCE" Type="Self.TBL_ILCE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_IL">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="TBL_ILCE">
+              <PropertyRef Name="sehir" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_OGRENCILER_TBL_VELILER">
+          <End Role="TBL_VELILER" Type="Self.TBL_VELILER" Multiplicity="0..1" />
+          <End Role="TBL_OGRENCILER" Type="Self.TBL_OGRENCILER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_VELILER">
+              <PropertyRef Name="VELIID" />
+            </Principal>
+            <Dependent Role="TBL_OGRENCILER">
+              <PropertyRef Name="OGRVELIID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="OkulOtomasyonModelStoreContainer">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_IL" EntityType="Self.TBL_IL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_ILCE" EntityType="Self.TBL_ILCE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_OGRENCILER" EntityType="Self.TBL_OGRENCILER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_OGRETMENLER" EntityType="Self.TBL_OGRETMENLER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_VELILER" EntityType="Self.TBL_VELILER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_BRANSLAR" EntityType="Self.TBL_BRANSLAR" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [TBL_BRANSLAR].[BRANSID] AS [BRANSID], 
+    [TBL_BRANSLAR].[BRANSAD] AS [BRANSAD]
+    FROM [dbo].[TBL_BRANSLAR] AS [TBL_BRANSLAR]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_TBL_ILCE_TBL_IL1" Association="Self.FK_TBL_ILCE_TBL_IL1">
+            <End Role="TBL_IL" EntitySet="TBL_IL" />
+            <End Role="TBL_ILCE" EntitySet="TBL_ILCE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_OGRENCILER_TBL_VELILER" Association="Self.FK_TBL_OGRENCILER_TBL_VELILER">
+            <End Role="TBL_VELILER" EntitySet="TBL_VELILER" />
+            <End Role="TBL_OGRENCILER" EntitySet="TBL_OGRENCILER" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OkulOtomasyonModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TBL_IL">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sehir" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TBL_ILCE" Relationship="Self.FK_TBL_ILCE_TBL_IL1" FromRole="TBL_IL" ToRole="TBL_ILCE" />
+        </EntityType>
+        <EntityType Name="TBL_ILCE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="ilce" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="sehir" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="TBL_IL" Relationship="Self.FK_TBL_ILCE_TBL_IL1" FromRole="TBL_ILCE" ToRole="TBL_IL" />
+        </EntityType>
+        <EntityType Name="TBL_OGRENCILER">
+          <Key>
+            <PropertyRef Name="OGRID" />
+          </Key>
+          <Property Name="OGRID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OGRNO" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="OGRVELIID" Type="Int32" />
+          <Property Name="OGRAD" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="OGRSOYAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OGRDOGUM" Type="DateTime" Precision="0" />
+          <Property Name="OGRCINSIYET" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="OGRTC" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Name="OGRIL" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="OGRILCE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="OGRADRES" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OGRSINIF" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="OGRFOTO" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TBL_VELILER" Relationship="Self.FK_TBL_OGRENCILER_TBL_VELILER" FromRole="TBL_OGRENCILER" ToRole="TBL_VELILER" />
+        </EntityType>
+        <EntityType Name="TBL_OGRETMENLER">
+          <Key>
+            <PropertyRef Name="OGRTID" />
+          </Key>
+          <Property Name="OGRTID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OGRTAD" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="OGRTSOYAD" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="OGRTTC" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Name="OGRTTEL" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="OGRTMAIL" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="OGRTIL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="OGRTILCE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="OGRTADRES" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="OGRTBRANS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OGRTFOTO" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBL_VELILER">
+          <Key>
+            <PropertyRef Name="VELIID" />
+          </Key>
+          <Property Name="VELIID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VELIANNE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VELIBABA" Type="Binary" MaxLength="50" FixedLength="false" />
+          <Property Name="VELITEL1" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="VELITEL2" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="VELIMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TBL_OGRENCILER" Relationship="Self.FK_TBL_OGRENCILER_TBL_VELILER" FromRole="TBL_VELILER" ToRole="TBL_OGRENCILER" />
+        </EntityType>
+        <EntityType Name="TBL_BRANSLAR">
+          <Key>
+            <PropertyRef Name="BRANSID" />
+          </Key>
+          <Property Name="BRANSID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BRANSAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_TBL_ILCE_TBL_IL1">
+          <End Role="TBL_IL" Type="Self.TBL_IL" Multiplicity="1" />
+          <End Role="TBL_ILCE" Type="Self.TBL_ILCE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_IL">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="TBL_ILCE">
+              <PropertyRef Name="sehir" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_OGRENCILER_TBL_VELILER">
+          <End Role="TBL_VELILER" Type="Self.TBL_VELILER" Multiplicity="0..1" />
+          <End Role="TBL_OGRENCILER" Type="Self.TBL_OGRENCILER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_VELILER">
+              <PropertyRef Name="VELIID" />
+            </Principal>
+            <Dependent Role="TBL_OGRENCILER">
+              <PropertyRef Name="OGRVELIID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="OkulOtomasyonEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="TBL_IL" EntityType="Self.TBL_IL" />
+          <EntitySet Name="TBL_ILCE" EntityType="Self.TBL_ILCE" />
+          <EntitySet Name="TBL_OGRENCILER" EntityType="Self.TBL_OGRENCILER" />
+          <EntitySet Name="TBL_OGRETMENLER" EntityType="Self.TBL_OGRETMENLER" />
+          <EntitySet Name="TBL_VELILER" EntityType="Self.TBL_VELILER" />
+          <EntitySet Name="TBL_BRANSLAR" EntityType="Self.TBL_BRANSLAR" />
+          <AssociationSet Name="FK_TBL_ILCE_TBL_IL1" Association="Self.FK_TBL_ILCE_TBL_IL1">
+            <End Role="TBL_IL" EntitySet="TBL_IL" />
+            <End Role="TBL_ILCE" EntitySet="TBL_ILCE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_OGRENCILER_TBL_VELILER" Association="Self.FK_TBL_OGRENCILER_TBL_VELILER">
+            <End Role="TBL_VELILER" EntitySet="TBL_VELILER" />
+            <End Role="TBL_OGRENCILER" EntitySet="TBL_OGRENCILER" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OkulOtomasyonModelStoreContainer" CdmEntityContainer="OkulOtomasyonEntities">
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="OkulOtomasyonModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_IL">
+            <EntityTypeMapping TypeName="OkulOtomasyonModel.TBL_IL">
+              <MappingFragment StoreEntitySet="TBL_IL">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="sehir" ColumnName="sehir" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_ILCE">
+            <EntityTypeMapping TypeName="OkulOtomasyonModel.TBL_ILCE">
+              <MappingFragment StoreEntitySet="TBL_ILCE">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ilce" ColumnName="ilce" />
+                <ScalarProperty Name="sehir" ColumnName="sehir" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_OGRENCILER">
+            <EntityTypeMapping TypeName="OkulOtomasyonModel.TBL_OGRENCILER">
+              <MappingFragment StoreEntitySet="TBL_OGRENCILER">
+                <ScalarProperty Name="OGRID" ColumnName="OGRID" />
+                <ScalarProperty Name="OGRNO" ColumnName="OGRNO" />
+                <ScalarProperty Name="OGRVELIID" ColumnName="OGRVELIID" />
+                <ScalarProperty Name="OGRAD" ColumnName="OGRAD" />
+                <ScalarProperty Name="OGRSOYAD" ColumnName="OGRSOYAD" />
+                <ScalarProperty Name="OGRDOGUM" ColumnName="OGRDOGUM" />
+                <ScalarProperty Name="OGRCINSIYET" ColumnName="OGRCINSIYET" />
+                <ScalarProperty Name="OGRTC" ColumnName="OGRTC" />
+                <ScalarProperty Name="OGRIL" ColumnName="OGRIL" />
+                <ScalarProperty Name="OGRILCE" ColumnName="OGRILCE" />
+                <ScalarProperty Name="OGRADRES" ColumnName="OGRADRES" />
+                <ScalarProperty Name="OGRSINIF" ColumnName="OGRSINIF" />
+                <ScalarProperty Name="OGRFOTO" ColumnName="OGRFOTO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_OGRETMENLER">
+            <EntityTypeMapping TypeName="OkulOtomasyonModel.TBL_OGRETMENLER">
+              <MappingFragment StoreEntitySet="TBL_OGRETMENLER">
+                <ScalarProperty Name="OGRTID" ColumnName="OGRTID" />
+                <ScalarProperty Name="OGRTAD" ColumnName="OGRTAD" />
+                <ScalarProperty Name="OGRTSOYAD" ColumnName="OGRTSOYAD" />
+                <ScalarProperty Name="OGRTTC" ColumnName="OGRTTC" />
+                <ScalarProperty Name="OGRTTEL" ColumnName="OGRTTEL" />
+                <ScalarProperty Name="OGRTMAIL" ColumnName="OGRTMAIL" />
+                <ScalarProperty Name="OGRTIL" ColumnName="OGRTIL" />
+                <ScalarProperty Name="OGRTILCE" ColumnName="OGRTILCE" />
+                <ScalarProperty Name="OGRTADRES" ColumnName="OGRTADRES" />
+                <ScalarProperty Name="OGRTBRANS" ColumnName="OGRTBRANS" />
+                <ScalarProperty Name="OGRTFOTO" ColumnName="OGRTFOTO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_VELILER">
+            <EntityTypeMapping TypeName="OkulOtomasyonModel.TBL_VELILER">
+              <MappingFragment StoreEntitySet="TBL_VELILER">
+                <ScalarProperty Name="VELIID" ColumnName="VELIID" />
+                <ScalarProperty Name="VELIANNE" ColumnName="VELIANNE" />
+                <ScalarProperty Name="VELIBABA" ColumnName="VELIBABA" />
+                <ScalarProperty Name="VELITEL1" ColumnName="VELITEL1" />
+                <ScalarProperty Name="VELITEL2" ColumnName="VELITEL2" />
+                <ScalarProperty Name="VELIMAIL" ColumnName="VELIMAIL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_BRANSLAR">
+            <EntityTypeMapping TypeName="OkulOtomasyonModel.TBL_BRANSLAR">
+              <MappingFragment StoreEntitySet="TBL_BRANSLAR">
+                <ScalarProperty Name="BRANSID" ColumnName="BRANSID" />
+                <ScalarProperty Name="BRANSAD" ColumnName="BRANSAD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

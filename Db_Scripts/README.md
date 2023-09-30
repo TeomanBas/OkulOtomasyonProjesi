@@ -11,3 +11,5 @@ Okul database'ine bağlanacak olan düşük yetkili kullanıcıyı oluşturan sc
 İl ve ilçe tablolarını oluşturan veri içerisine verileri insert eden sql scriptidir.
 ## TBL_OGRENCILER.sql
 Öğrenciler tablosunu oluşturan ms sql script dosyasıdır.
+## TBL_VELILER.sql
+Velilerin bilgilerinin tutulduğu tablodur.
